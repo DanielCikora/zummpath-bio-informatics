@@ -1,10 +1,32 @@
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroImage from "../assets/images/heroImages/dna-image.jpg";
 const Hero = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Register ScrollTrigger plugin
+      gsap.registerPlugin(ScrollTrigger);
+      // Confirm that ScrollTrigger is enabled
+      console.log("Is ScrollTrigger enabled?", ScrollTrigger.enabled);
+      // Animation code
+      gsap.to(".hero-image", {
+        scale: 1.1,
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+  }, []);
+
   return (
     <section className='hero relative w-full h-screen overflow-hidden'>
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden'>
         <img
-          className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover blur-sm grayscale'
+          className='hero-image absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover blur-sm grayscale'
           src={HeroImage}
           alt='hero'
         />
