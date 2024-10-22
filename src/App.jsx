@@ -1,10 +1,14 @@
+import Brochure from "./components/brochure/Brochure";
 import Header from "./components/Header";
 import Hero from "./components/hero/Hero";
 const App = () => {
   return (
     <>
       <Header />
-      <Hero />
+      <main>
+        <Hero />
+        <Brochure />
+      </main>
     </>
   );
 };

@@ -11,7 +11,7 @@ const Hero = () => {
       console.log("Is ScrollTrigger enabled?", ScrollTrigger.enabled);
       // Animation code
       gsap.to(".hero-image", {
-        scale: 1.1,
+        scale: 2,
         scrollTrigger: {
           trigger: ".hero",
           start: "top top",
