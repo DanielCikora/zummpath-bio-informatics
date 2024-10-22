@@ -14,7 +14,8 @@ const Hero = () => {
           <h1 className='text-8xl font-bold text-left text-gray-800'>
             We are the best {""}
             <span className='text-green-700'>
-              Frontend Developers in Zummit.
+              Frontend Developers in{" "}
+              <span className='text-orange-700'>Zummit.</span>
             </span>
           </h1>
           <h2 className='text-3xl font-semibold'>(probably)</h2>
