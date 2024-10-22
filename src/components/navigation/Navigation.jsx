@@ -22,17 +22,17 @@ const Navigation = () => {
         <div className='relative w-8 h-6 transform transition-all duration-300'>
           {/* Hamburger lines */}
           <span
-            className={`block absolute h-1 w-full bg-white transform transition-all duration-300 ${
+            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
               openMenu ? "top-2.5 rotate-45" : "top-0 rotate-0"
             }`}
           ></span>
           <span
-            className={`block absolute h-1 w-full bg-white transform transition-all duration-300 ${
-              openMenu ? "opacity-0" : "top-2.5"
+            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
+              openMenu ? "-translate-x-28" : "top-2.5"
             }`}
           ></span>
           <span
-            className={`block absolute h-1 w-full bg-white transform transition-all duration-300 ${
+            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
               openMenu ? "top-2.5 -rotate-45" : "top-5 rotate-0"
             }`}
           ></span>
