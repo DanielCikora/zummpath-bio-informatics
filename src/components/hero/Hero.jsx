@@ -16,7 +16,7 @@ const Hero = () => {
           trigger: ".hero",
           start: "top top",
           end: "bottom top",
-          scrub: 1,
+          scrub: true,
         },
       });
     }
@@ -33,14 +33,16 @@ const Hero = () => {
       </div>
       <div className='wrapper'>
         <div className='hero-content relative pt-44 max-w-[800px]'>
-          <h1 className='text-8xl font-bold text-left text-gray-800'>
+          <h1 className='md:text-8xl text-4xl font-bold md:text-left text-center text-gray-800'>
             We are the best {""}
             <span className='text-green-700'>
               Frontend Developers in{" "}
               <span className='text-orange-700'>Zummit.</span>
             </span>
           </h1>
-          <h2 className='text-3xl font-semibold'>(probably)</h2>
+          <h2 className='text-3xl font-semibold md:text-left text-center'>
+            (probably)
+          </h2>
         </div>
       </div>
     </section>
