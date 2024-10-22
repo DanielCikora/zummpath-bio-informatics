@@ -1,7 +1,7 @@
 import Navigation from "./navigation/Navigation";
 const Header = () => {
   return (
-    <header>
+    <header className='relative'>
       <Navigation />
     </header>
   );
