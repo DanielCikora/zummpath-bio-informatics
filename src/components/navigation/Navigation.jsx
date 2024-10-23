@@ -46,7 +46,7 @@ const Navigation = () => {
       </button>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full md:w-64 md:text-left text-center w-full bg-teal-800 text-white transform transition-transform duration-300 z-40 ${
+        className={`fixed top-0 left-0 h-full md:w-64 md:text-left text-center w-full bg-[#15856f] text-white transform transition-transform duration-300 z-40 ${
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -55,7 +55,7 @@ const Navigation = () => {
           <ul className='flex flex-col gap-4'>
             {navigationLinks.map((navigationLink) => (
               <li
-                className='cursor-pointer py-2 px-8 rounded-md w-fit hover:bg-white hover:text-teal-300 text-black transition duration-200'
+                className='cursor-pointer py-2 px-8 rounded-md w-fit hover:bg-white text-black transition duration-200'
                 key={navigationLink.id}
               >
                 <a
