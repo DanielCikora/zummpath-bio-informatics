@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ZummitLogoImage from "../assets/images/navigationImages/zummit_logo.png";
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
@@ -17,9 +18,9 @@ const Navigation = () => {
   };
   const navigationLinks = [
     { id: 0, href: "/", linkText: "Home" },
-    { id: 1, href: "/about", linkText: "About" },
-    { id: 2, href: "/contact", linkText: "Contact" },
-    { id: 3, href: "/careers", linkText: "Careers" },
+    { id: 1, href: "/", linkText: "About" },
+    { id: 2, href: "/", linkText: "Contact" },
+    { id: 3, href: "/", linkText: "Careers" },
   ];
   return (
     <nav>
@@ -29,7 +30,7 @@ const Navigation = () => {
           {/* Hamburger lines */}
           <span
             className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
-              openMenu ? "top-2.5 rotate-45" : "top-0 rotate-0"
+              openMenu ? "top-2.5 rotate-45 bg-white" : "top-0 rotate-0"
             }`}
           />
           <span
@@ -39,23 +40,25 @@ const Navigation = () => {
           />
           <span
             className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
-              openMenu ? "top-2.5 -rotate-45" : "top-5 rotate-0"
+              openMenu ? "top-2.5 -rotate-45 bg-white" : "top-5 rotate-0"
             }`}
           />
         </div>
       </button>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full md:w-64 md:text-left text-center w-full bg-[#15856f] text-white transform transition-transform duration-300 z-40 ${
+        className={`fixed top-0 left-0 h-full md:w-64 md:text-left text-center w-full bg-royalGreen text-white transform transition-transform duration-300 z-40 ${
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className='flex flex-col md:pt-20 pt-14 md:items-start items-center p-6 gap-10'>
-          <div className='text-3xl font-bold'>LOGO</div>
+          <div className='block'>
+            <img className='block' src={ZummitLogoImage} alt='logo' />
+          </div>
           <ul className='flex flex-col gap-4'>
             {navigationLinks.map((navigationLink) => (
               <li
-                className='cursor-pointer py-2 px-8 rounded-md w-fit hover:bg-white text-black transition duration-200'
+                className='cursor-pointer py-2 px-2 rounded-md w-fit hover:bg-black text-white transition duration-200'
                 key={navigationLink.id}
               >
                 <a

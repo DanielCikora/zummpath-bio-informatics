@@ -1,18 +1,14 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import HeroImage from "../assets/images/heroImages/dna-image.jpg";
 import Scene from "./Animation/Scene";
-
 const Hero = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Register ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
-
       // Confirm that ScrollTrigger is enabled
       console.log("Is ScrollTrigger enabled?", ScrollTrigger.enabled);
-
       // Animation code
       gsap.to(".hero-canvas", {
         scale: 1.5, // Adjust to desired scale
@@ -33,23 +29,30 @@ const Hero = () => {
       });
     }
   }, []);
-
   return (
     <>
       <section className='hero relative w-full h-screen overflow-hidden'>
         <div className='absolute top-0 left-0 w-full h-full overflow-hidden'>
           <Scene />
         </div>
-        <div className='wrapper'>
-          <div className='hero-content relative z-50 pt-44 max-w-[800px]'>
-            <h1 className='md:text-8xl mediumSmall:text-6xl text-4xl font-bold md:text-left text-center text-gray-800'>
-              Transform Your Bioinformatics Aspirations Into Reality!
+        <div className='wrapper h-full'>
+          <div className='hero-content justify-center h-full flex flex-col gap-10 relative z-50'>
+            <h1 className='md:text-8xl mediumSmall:text-6xl text-4xl font-semibold md:text-left text-center text-gray-800'>
+              Quantumzyme
             </h1>
+            <h2 className='md:text-4xl mediumSmall:text-3xl text-2xl font-medium md:text-left text-center text-gray-800'>
+              Turn Your Bioinformatics Dreams Into Reality!
+            </h2>
+            <a
+              className='block bg-royalGreen py-2 px-4 max-w-fit rounded-lg text-xl text-offWhite font-semibold'
+              href='/'
+            >
+              Learn More
+            </a>
           </div>
         </div>
       </section>
     </>
   );
 };
-
 export default Hero;

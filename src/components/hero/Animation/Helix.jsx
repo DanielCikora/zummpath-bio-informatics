@@ -59,7 +59,7 @@ const Helix = () => {
     helix.push(
       <line key={`line-${i}`}>
         <primitive object={geometry} attach='geometry' />
-        <lineBasicMaterial color='#A3E4D7' linewidth={1} />
+        <lineBasicMaterial color='#4CC1A1' linewidth={2} />
       </line>
     );
   }
