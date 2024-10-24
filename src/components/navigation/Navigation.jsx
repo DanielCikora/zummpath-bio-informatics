@@ -25,33 +25,35 @@ const Navigation = () => {
   return (
     <nav>
       {/* Hamburger Button */}
-      <button className='fixed top-4 left-4 z-50' onClick={toggleOpenMenu}>
-        <div className='relative w-8 h-6 transform transition-all duration-300'>
-          {/* Hamburger lines */}
-          <span
-            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
-              openMenu ? "top-2.5 rotate-45 bg-white" : "top-0 rotate-0"
-            }`}
-          />
-          <span
-            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
-              openMenu ? "-translate-x-28" : "top-2.5"
-            }`}
-          />
-          <span
-            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
-              openMenu ? "top-2.5 -rotate-45 bg-white" : "top-5 rotate-0"
-            }`}
-          />
-        </div>
-      </button>
+      <div className='fixed z-50 bg-royalGreen h-dvh'>
+        <button className='p-3' onClick={toggleOpenMenu}>
+          <div className='relative w-8 h-6 transform transition-all duration-300'>
+            {/* Hamburger lines */}
+            <span
+              className={`block absolute h-1 w-full bg-offWhite rounded-3xl transform transition-all duration-300 ${
+                openMenu ? "top-2.5 rotate-45" : "top-0 rotate-0"
+              }`}
+            />
+            <span
+              className={`block absolute h-1 w-full bg-offWhite rounded-3xl transform transition-all duration-300 ${
+                openMenu ? "-translate-x-28" : "top-2.5"
+              }`}
+            />
+            <span
+              className={`block absolute h-1 w-full bg-offWhite rounded-3xl transform transition-all duration-300 ${
+                openMenu ? "top-2.5 -rotate-45" : "top-5 rotate-0"
+              }`}
+            />
+          </div>
+        </button>
+      </div>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full md:w-64 md:text-left text-center w-full bg-royalGreen text-white transform transition-transform duration-300 z-40 ${
+        className={`fixed top-0 left-[56px] h-full md:w-64 md:text-left text-center w-full bg-royalGreen text-white transform transition-transform duration-300 z-40 ${
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className='flex flex-col md:pt-20 pt-14 md:items-start items-center p-6 gap-10'>
+        <div className='flex flex-col pt-14 pr-14 md:items-start items-center gap-10'>
           <div className='block'>
             <img className='block' src={ZummitLogoImage} alt='logo' />
           </div>

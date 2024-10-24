@@ -7,11 +7,9 @@ const Hero = () => {
     if (typeof window !== "undefined") {
       // Register ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
-      // Confirm that ScrollTrigger is enabled
-      console.log("Is ScrollTrigger enabled?", ScrollTrigger.enabled);
       // Animation code
-      gsap.to(".hero-canvas", {
-        scale: 1.5, // Adjust to desired scale
+      gsap.to(".hero-content", {
+        scale: 1.2, // Adjust to desired scale
         transformOrigin: "center center", // Set the transformation origin
         scrollTrigger: {
           trigger: ".hero",
@@ -36,7 +34,7 @@ const Hero = () => {
           <Scene />
         </div>
         <div className='wrapper h-full'>
-          <div className='hero-content justify-center h-full flex flex-col gap-10 relative z-50'>
+          <div className='hero-content px-20 justify-center h-full flex flex-col gap-10 relative z-30'>
             <h1 className='md:text-8xl mediumSmall:text-6xl text-4xl font-semibold md:text-left text-center text-gray-800'>
               Quantumzyme
             </h1>
