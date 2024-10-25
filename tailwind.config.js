@@ -7,6 +7,9 @@ module.exports = {
         offWhite: "#F8F8F8",
         royalGreen: "#003C2C",
       },
+      screens: {
+        mediumSmall: "min-width: 500px",
+      },
     },
   },
   plugins: [],
