@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Brochure = () => {
   const brochureCardsTexts = [
     {
@@ -25,6 +29,16 @@ const Brochure = () => {
         "This internship serves as a launchpad for potential full-time roles, like Research Assistant, at Quantumzyme. Take your first step toward a fulfilling career in bioinformatics.",
     },
   ];
+  const [expandedCards, setExpandedCards] = useState(
+    new Array(brochureCardsTexts.length).fill(false)
+  );
+  const toggleViewMore = (index) => {
+    // Create a copy of the current expandedCards array
+    const updatedExpandedCards = [...expandedCards];
+    // Toggle the specific card's state
+    updatedExpandedCards[index] = !updatedExpandedCards[index];
+    setExpandedCards(updatedExpandedCards);
+  };
 
   return (
     <section className='brochure pt-8 pb-10'>
@@ -33,23 +47,28 @@ const Brochure = () => {
           <h2 className='md:text-6xl mediumSmall:text-4xl text-2xl font-semibold text-center text-gray-800 mb-32'>
             What we offer
           </h2>
-          <div className='brochure-boxes flex md:flex-row flex-col h-full gap-5 justify-between'>
-            {brochureCardsTexts.map((brochureCardsText) => (
+          <div className='brochure-boxes flex md:flex-row flex-col gap-5 justify-between'>
+            {brochureCardsTexts.map((brochureCardsText, index) => (
               <div
-                className='bg-lightGreen max-h-[580px] flex flex-col justify-between gap-8 bg-opacity-60 md:text-left text-center px-12 py-16 rounded-xl text-offWhite w-full max-w-[380px]'
+                className='bg-lightGreen min-h-[500px] flex flex-col justify-between bg-opacity-60 md:text-left text-center px-12 py-16 rounded-xl text-offWhite w-full max-w-[380px]'
                 key={brochureCardsText.id}
               >
                 <h3 className='text-royalGreen md:text-3xl text-2xl font-semibold'>
                   {brochureCardsText.title}
                 </h3>
-                <p className='text-black md:text-xl text-lg'>
+                <p
+                  className={`block text-black md:text-xl text-lg max-h-0 overflow-hidden transition-all duration-500 ease-in-out ${
+                    expandedCards[index] ? "max-h-[400px]" : ""
+                  }`}
+                >
                   {brochureCardsText.paragraph}
                 </p>
                 <button
-                  className='block max-w-fit font-bold text-xl rounded-full bg-royalGreen px-4 py-2'
+                  className='block max-w-fit font-bold text-xl rounded-full bg-royalGreen px-2.5 py-2'
                   type='button'
+                  onClick={() => toggleViewMore(index)} // Pass the index of the clicked card
                 >
-                  +
+                  <FontAwesomeIcon className='block text-2xl' icon={faPlus} />
                 </button>
               </div>
             ))}
@@ -59,4 +78,5 @@ const Brochure = () => {
     </section>
   );
 };
+
 export default Brochure;
