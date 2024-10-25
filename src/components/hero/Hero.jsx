@@ -8,21 +8,15 @@ const Hero = () => {
       // Register ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
       // Animation code
-      gsap.to(".hero-content", {
-        scale: 1.2, // Adjust to desired scale
+      gsap.to(".hero-canvas", {
+        scale: 1.2, // Scale to 1.2x when scrolling down
         transformOrigin: "center center", // Set the transformation origin
         scrollTrigger: {
           trigger: ".hero",
           start: "top top",
           end: "bottom top",
           scrub: true,
-          markers: false, // Enable this for debugging (optional)
-          onUpdate: (self) => {
-            // Fix issues on scroll back
-            if (self.progress === 0) {
-              gsap.set(".hero-canvas", { scale: 1 });
-            }
-          },
+          markers: false, // Enable markers for debugging if needed
         },
       });
     }
@@ -30,7 +24,7 @@ const Hero = () => {
   return (
     <>
       <section className='hero relative w-full h-screen overflow-hidden'>
-        <div className='absolute top-0 left-0 w-full h-full overflow-hidden'>
+        <div className='absolute top-0 left-0 w-full h-full overflow-hidden hero-canvas'>
           <Scene />
         </div>
         <div className='wrapper h-full'>
