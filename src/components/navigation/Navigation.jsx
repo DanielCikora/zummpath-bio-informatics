@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
-import ZummitLogoImage from "../assets/images/navigationImages/zummit_logo.png";
+import { Link } from "react-router-dom";
+import QuantumzimeLogoImage from "../assets/images/navigationImages/quantumzyme_logo.png";
+
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  // Control body overflow when the menu is open
   useEffect(() => {
     const body = document.querySelector("body");
     if (openMenu) {
@@ -13,62 +17,75 @@ const Navigation = () => {
       body.style.overflow = "auto";
     };
   }, [openMenu]);
+
   const toggleOpenMenu = () => {
     setOpenMenu(!openMenu);
   };
+
+  const closeMenu = () => {
+    setOpenMenu(false);
+  };
+
   const navigationLinks = [
     { id: 0, href: "/", linkText: "Home" },
-    { id: 1, href: "/", linkText: "About" },
-    { id: 2, href: "/", linkText: "Contact" },
-    { id: 3, href: "/", linkText: "Careers" },
+    { id: 1, href: "/About", linkText: "About" },
+    { id: 2, href: "/Contact", linkText: "Contact" },
+    { id: 3, href: "/Careers", linkText: "Careers" },
+    { id: 4, href: "/Faq", linkText: "FAQ" },
   ];
+
   return (
     <nav>
       {/* Hamburger Button */}
-      <div className='fixed z-50 bg-royalGreen h-dvh'>
-        <button className='p-4' onClick={toggleOpenMenu}>
-          <div className='relative w-8 h-6 transform transition-all duration-300'>
-            {/* Hamburger lines */}
-            <span
-              className={`block absolute h-1 w-full bg-offWhite rounded-3xl transform transition-all duration-300 ${
-                openMenu ? "top-2.5 rotate-45" : "top-0 rotate-0"
-              }`}
-            />
-            <span
-              className={`block absolute h-1 w-full bg-offWhite rounded-3xl transform transition-all duration-300 ${
-                openMenu ? "-translate-x-28" : "top-2.5"
-              }`}
-            />
-            <span
-              className={`block absolute h-1 w-full bg-offWhite rounded-3xl transform transition-all duration-300 ${
-                openMenu ? "top-2.5 -rotate-45" : "top-5 rotate-0"
-              }`}
-            />
-          </div>
-        </button>
-      </div>
+      <button className='md:p-4 p-3 fixed z-50' onClick={toggleOpenMenu}>
+        <div className='relative w-8 h-6 transform transition-all duration-300'>
+          {/* Hamburger lines */}
+          <span
+            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
+              openMenu ? "top-2.5 rotate-45 bg-offWhite" : "top-0 rotate-0"
+            }`}
+          />
+          <span
+            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
+              openMenu ? "-translate-x-28" : "top-2.5"
+            }`}
+          />
+          <span
+            className={`block absolute h-1 w-full bg-black rounded-3xl transform transition-all duration-300 ${
+              openMenu ? "top-2.5 -rotate-45 bg-offWhite" : "top-5 rotate-0"
+            }`}
+          />
+        </div>
+      </button>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-[56px] h-full md:w-64 md:text-left text-center w-full bg-royalGreen text-white transform transition-transform duration-300 z-40 ${
+        className={`fixed top-0 h-full md:w-64 md:text-left text-center w-full bg-royalGreen text-white transform transition-transform duration-300 z-40 ${
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className='flex flex-col pt-14 pr-14 md:items-start items-center gap-10'>
-          <div className='block'>
-            <img className='block' src={ZummitLogoImage} alt='logo' />
+        <div className='flex flex-col pt-4 md:items-start items-center gap-10'>
+          <div className='block max-w-24 mx-auto'>
+            <Link className='block' to='/' onClick={closeMenu}>
+              <img
+                className='block w-full h-auto'
+                src={QuantumzimeLogoImage}
+                alt='quantumzime-logo'
+              />
+            </Link>
           </div>
-          <ul className='flex flex-col gap-4'>
+          <ul className='flex flex-col gap-4 self-center items-center'>
             {navigationLinks.map((navigationLink) => (
               <li
-                className='cursor-pointer py-2 px-2 rounded-md w-fit hover:bg-black text-white transition duration-200'
+                className='block cursor-pointer rounded-md w-fit hover:bg-black text-white transition duration-200'
                 key={navigationLink.id}
               >
-                <a
-                  className='block text-2xl w-fit font-semibold'
-                  href={navigationLink.href}
+                <Link
+                  className='block text-2xl py-2 px-1 w-fit font-semibold'
+                  to={navigationLink.href}
+                  onClick={closeMenu} // Close the menu when clicking a link
                 >
                   {navigationLink.linkText}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
