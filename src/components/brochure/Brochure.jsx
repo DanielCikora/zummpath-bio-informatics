@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const Brochure = () => {
   const brochureCardsTexts = [
     {
@@ -33,13 +32,10 @@ const Brochure = () => {
     new Array(brochureCardsTexts.length).fill(false)
   );
   const toggleViewMore = (index) => {
-    // Create a copy of the current expandedCards array
     const updatedExpandedCards = [...expandedCards];
-    // Toggle the specific card's state
     updatedExpandedCards[index] = !updatedExpandedCards[index];
     setExpandedCards(updatedExpandedCards);
   };
-
   return (
     <section className='brochure pt-8 pb-10'>
       <div className='wrapper'>
@@ -50,21 +46,27 @@ const Brochure = () => {
           <div className='brochure-boxes flex md:flex-row flex-col gap-5 justify-between'>
             {brochureCardsTexts.map((brochureCardsText, index) => (
               <div
-                className='bg-lightGreen min-h-[500px] flex flex-col justify-between bg-opacity-60 md:text-left text-center px-12 py-16 rounded-xl text-offWhite w-full max-w-[380px]'
+                className='bg-lightGreen min-h-[500px] flex flex-col justify-between bg-opacity-60 md:text-left text-center px-6 py-10 rounded-xl text-offWhite w-full max-w-[380px]'
                 key={brochureCardsText.id}
               >
                 <h3 className='text-royalGreen md:text-3xl text-2xl font-semibold'>
                   {brochureCardsText.title}
                 </h3>
-                <p
-                  className={`block text-black md:text-xl text-lg max-h-0 overflow-hidden transition-all duration-500 ease-in-out ${
-                    expandedCards[index] ? "max-h-[400px]" : ""
-                  }`}
-                >
-                  {brochureCardsText.paragraph}
-                </p>
+                <div className='overflow-hidden'>
+                  <p
+                    className={`block text-black md:text-xl text-lg transition-all duration-500 ease-in-out ${
+                      expandedCards[index]
+                        ? "max-h-[400px] opacity-100" // Fully visible
+                        : "max-h-[100px] opacity-100" // Limit height for collapsed state
+                    }`}
+                  >
+                    {expandedCards[index]
+                      ? brochureCardsText.paragraph
+                      : `${brochureCardsText.paragraph.slice(0, 50)}...`}
+                  </p>
+                </div>
                 <button
-                  className='block max-w-fit font-bold text-xl rounded-full bg-royalGreen px-2.5 py-2'
+                  className='block max-w-fit font-bold text-xl rounded-full bg-royalGreen px-2.5 py-2 mt-2'
                   type='button'
                   onClick={() => toggleViewMore(index)} // Pass the index of the clicked card
                 >

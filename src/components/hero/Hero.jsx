@@ -1,27 +1,6 @@
-import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Scene from "./Animation/Scene";
 import { Link } from "react-router-dom";
 const Hero = () => {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Register ScrollTrigger plugin
-      gsap.registerPlugin(ScrollTrigger);
-      // Animation code
-      gsap.to(".hero-canvas", {
-        scale: 1.2, // Scale to 1.2x when scrolling down
-        transformOrigin: "center center", // Set the transformation origin
-        scrollTrigger: {
-          trigger: ".hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-          markers: false, // Enable markers for debugging if needed
-        },
-      });
-    }
-  }, []);
   return (
     <>
       <section className='hero relative w-full h-screen overflow-hidden'>
