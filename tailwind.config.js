@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         offWhite: "#F8F8F8",
         royalGreen: "#003C2C",
+        lightGreen: "#D3DCDA",
       },
       screens: {
         mediumSmall: "min-width: 500px",

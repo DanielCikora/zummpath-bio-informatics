@@ -29,7 +29,7 @@ const Hero = () => {
           <Scene />
         </div>
         <div className='wrapper h-full top-0 left-[50%] -translate-x-[50%] z-30 absolute'>
-          <div className='hero-content md:px-20 md:items-start items-center w-full md:justify-center md:pt-0 pt-14 h-full flex flex-col gap-4'>
+          <div className='hero-content md:px-20 md:items-start items-center w-full md:justify-center md:pt-0 pt-20 h-full flex flex-col gap-4'>
             <h1 className='md:text-8xl mediumSmall:text-6xl text-5xl font-semibold md:text-left text-center text-gray-800'>
               Quantumzyme
             </h1>
@@ -38,13 +38,13 @@ const Hero = () => {
             </h2>
             <div className='flex gap-2 md:flex-row flex-col w-full text-center'>
               <Link
-                className='block bg-royalGreen border-royalGreen hover:bg-green-900 transition-all duration-200 ease-in-out py-2 px-4 md:max-w-fit w-full rounded-lg text-xl text-offWhite font-semibold'
+                className='block bg-royalGreen border-royalGreen hover:bg-green-900 transition-all duration-200 ease-in-out md:py-2 py-3 px-4 md:max-w-fit w-full rounded-lg text-xl text-offWhite font-semibold'
                 to='/'
               >
                 Apply Now
               </Link>
               <Link
-                className='block border-2 border-solid border-royalGreen bg-offWhite hover:bg-royalGreen hover:text-offWhite transition-all duration-200 ease-in-out py-1.5 px-4 md:max-w-fit w-full rounded-lg text-xl text-black font-semibold'
+                className='block border-2 border-solid border-royalGreen bg-offWhite hover:bg-royalGreen hover:text-offWhite transition-all duration-200 ease-in-out md:py-1.5 py-2.5 px-4 md:max-w-fit w-full rounded-lg text-xl text-black font-semibold'
                 to='/'
               >
                 Learn More

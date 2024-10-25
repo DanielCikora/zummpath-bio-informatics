@@ -8,7 +8,6 @@ import About from "./components/pages/About";
 import Careers from "./components/pages/Careers";
 import Contact from "./components/pages/Contact";
 import Faq from "./components/pages/Faq";
-
 const App = () => {
   return (
     <Router>

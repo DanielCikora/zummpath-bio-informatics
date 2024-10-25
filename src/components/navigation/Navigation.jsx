@@ -37,7 +37,10 @@ const Navigation = () => {
   return (
     <nav>
       {/* Hamburger Button */}
-      <button className='md:p-4 p-3 fixed z-50' onClick={toggleOpenMenu}>
+      <button
+        className='menu-button md:p-4 p-3 fixed z-50'
+        onClick={toggleOpenMenu}
+      >
         <div className='relative w-8 h-6 transform transition-all duration-300'>
           {/* Hamburger lines */}
           <span
