@@ -41,7 +41,7 @@ const Brochure = () => {
     <section className='brochure pt-8 pb-10'>
       <div className='wrapper'>
         <div className='brochure-content'>
-          <h2 className='md:text-6xl mediumSmall:text-4xl text-2xl font-semibold text-center text-gray-800 mb-32'>
+          <h2 className='md:text-6xl mediumSmall:text-4xl text-2xl font-semibold text-center text-royalGreen mb-32'>
             What we offer
           </h2>
           <div className='brochure-boxes flex md:flex-row flex-col gap-5 justify-between'>

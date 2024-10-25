@@ -1,8 +1,8 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Brochure from "./components/brochure/Brochure";
 import Header from "./components/Header";
 import Hero from "./components/hero/Hero";
+import Brochure from "./components/brochure/Brochure";
+import Program from "./components/program/Program";
 // Pages
 import About from "./components/pages/About";
 import Careers from "./components/pages/Careers";
@@ -21,6 +21,7 @@ const App = () => {
               <>
                 <Hero />
                 <Brochure />
+                <Program />
               </>
             }
           />
