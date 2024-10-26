@@ -1,3 +1,4 @@
+import "./program.css";
 const Program = () => {
   const programTexts = [
     {
@@ -35,10 +36,10 @@ const Program = () => {
           {programTexts.map((programText) => (
             <div
               key={programText.id}
-              className='flex flex-col items-center gap-6 w-full'
+              className='flex flex-col items-center gap-10 w-full'
             >
-              <div>
-                <h3 className='font-bold text-center w-fit md:text-7xl text-5xl bg-royalGreen text-white md:px-16 px-12 md:py-12 py-9 rounded-full'>
+              <div className='program-dots relative'>
+                <h3 className='program-steps relative font-bold text-center w-fit md:text-8xl text-5xl text-offWhite rounded-full'>
                   {programText.id}
                 </h3>
               </div>
