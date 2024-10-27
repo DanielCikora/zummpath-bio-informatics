@@ -5,7 +5,6 @@ import CareerImage from "../assets/images/brochureImages/career.png";
 import InternshipImage from "../assets/images/brochureImages/internship.png";
 import SkillsImage from "../assets/images/brochureImages/skills.png";
 import TrainingImage from "../assets/images/brochureImages/training.png";
-
 const Brochure = () => {
   const brochureCardsTexts = [
     {
@@ -41,14 +40,11 @@ const Brochure = () => {
       imageAlt: "career",
     },
   ];
-
   const [expandedCardIndex, setExpandedCardIndex] = useState(null); // Store the index of the currently expanded card
-
   const toggleViewMore = (index) => {
     // If the clicked card is already expanded, close it, otherwise open it and close any other card
     setExpandedCardIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-
   return (
     <section className='brochure pt-12 pb-10'>
       <div className='wrapper'>

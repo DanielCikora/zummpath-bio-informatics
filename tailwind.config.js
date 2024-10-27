@@ -7,6 +7,8 @@ module.exports = {
         offWhite: "#F8F8F8",
         royalGreen: "#003C2C",
         lightGreen: "#D3DCDA",
+        lightGray: "#EAEEED",
+        secondGray: "#D3DCDA",
       },
       screens: {
         mediumSmall: "500px",

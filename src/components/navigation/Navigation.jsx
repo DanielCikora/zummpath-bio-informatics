@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import QuantumzimeLogoImage from "../assets/images/navigationImages/quantumzyme_logo.png";
-
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
-
   // Control body overflow when the menu is open
   useEffect(() => {
     const body = document.querySelector("body");
@@ -17,15 +15,12 @@ const Navigation = () => {
       body.style.overflow = "auto";
     };
   }, [openMenu]);
-
   const toggleOpenMenu = () => {
     setOpenMenu(!openMenu);
   };
-
   const closeMenu = () => {
     setOpenMenu(false);
   };
-
   const navigationLinks = [
     { id: 0, href: "/", linkText: "Home" },
     { id: 1, href: "/About", linkText: "About" },
@@ -33,7 +28,6 @@ const Navigation = () => {
     { id: 3, href: "/Careers", linkText: "Careers" },
     { id: 4, href: "/Faq", linkText: "FAQ" },
   ];
-
   return (
     <nav>
       {/* Hamburger Button */}

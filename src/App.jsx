@@ -9,6 +9,7 @@ import FaqPage from "./components/pages/FaqPage";
 import ContactPage from "./components/pages/ContactPage";
 import AboutPage from "./components/pages/AboutPage";
 import CareersPage from "./components/pages/CareersPage";
+import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <Router>
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/Faq' element={<FaqPage />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 };
