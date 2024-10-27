@@ -32,7 +32,7 @@ const Program = () => {
   return (
     <section className='program-section py-20'>
       <div className='wrapper'>
-        <h2 className='md:text-6xl mediumSmall:text-4xl text-2xl font-semibold text-center text-royalGreen mb-32'>
+        <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen md:mb-32 mb-24'>
           Program Structure
         </h2>
         <div className='program-content relative flex md:flex-row flex-col justify-between text-center gap-4'>

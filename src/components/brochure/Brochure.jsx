@@ -50,11 +50,11 @@ const Brochure = () => {
   };
 
   return (
-    <section className='brochure pt-8 pb-10'>
+    <section className='brochure pt-12 pb-10'>
       <div className='wrapper'>
         <div className='brochure-content'>
-          <h2 className='md:text-6xl mediumSmall:text-4xl text-2xl font-semibold text-center text-royalGreen mb-32'>
-            What we offer
+          <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen md:mb-32 mb-24'>
+            What We Offer
           </h2>
           <div className='brochure-boxes flex lg:flex-row flex-col gap-5 lg:justify-between lg:items-start items-center'>
             {brochureCardsTexts.map((brochureCardsText, index) => (
