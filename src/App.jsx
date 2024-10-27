@@ -9,6 +9,7 @@ import About from "./components/pages/About";
 // import Careers from "./components/pages/Careers";
 import Contact from "./components/pages/Contact";
 import Faq from "./components/pages/Faq";
+import Eligibility from "./components/eligibility/Eligibility";
 const App = () => {
   return (
     <Router>
@@ -23,6 +24,7 @@ const App = () => {
                 <Hero />
                 <Brochure />
                 <Program />
+                <Eligibility />
                 <Careers />
               </>
             }
