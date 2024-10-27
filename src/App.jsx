@@ -3,9 +3,10 @@ import Header from "./components/Header";
 import Hero from "./components/hero/Hero";
 import Brochure from "./components/brochure/Brochure";
 import Program from "./components/program/Program";
+import Careers from "./components/careers/Careers";
 // Pages
 import About from "./components/pages/About";
-import Careers from "./components/pages/Careers";
+// import Careers from "./components/pages/Careers";
 import Contact from "./components/pages/Contact";
 import Faq from "./components/pages/Faq";
 const App = () => {
@@ -16,20 +17,21 @@ const App = () => {
         <Routes>
           {/* Home route with Hero and Brochure */}
           <Route
-            path='/'
+            path="/"
             element={
               <>
                 <Hero />
                 <Brochure />
                 <Program />
+                <Careers />
               </>
             }
           />
           {/* Other routes */}
-          <Route path='/About' element={<About />} />
-          <Route path='/Careers' element={<Careers />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/Faq' element={<Faq />} />
+          <Route path="/About" element={<About />} />
+          {/* <Route path="/Careers" element={<Careers />} /> */}
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Faq" element={<Faq />} />
         </Routes>
       </main>
     </Router>
