@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/hero/Hero";
 import Brochure from "./components/brochure/Brochure";
 import Program from "./components/program/Program";
+import Careers from "./components/careers/Careers";
 // Pages
 import FaqPage from "./components/pages/FaqPage";
 import ContactPage from "./components/pages/ContactPage";
@@ -22,6 +23,7 @@ const App = () => {
                 <Hero />
                 <Brochure />
                 <Program />
+                <Careers />
               </>
             }
           />
