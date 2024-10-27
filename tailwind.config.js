@@ -9,7 +9,8 @@ module.exports = {
         lightGreen: "#D3DCDA",
       },
       screens: {
-        mediumSmall: "min-width: 500px",
+        mediumSmall: "500px",
+        mediumLarge: "1200px",
       },
     },
   },

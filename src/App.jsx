@@ -4,10 +4,10 @@ import Hero from "./components/hero/Hero";
 import Brochure from "./components/brochure/Brochure";
 import Program from "./components/program/Program";
 // Pages
-import About from "./components/pages/About";
-import Careers from "./components/pages/Careers";
-import Contact from "./components/pages/Contact";
-import Faq from "./components/pages/Faq";
+import FaqPage from "./components/pages/FaqPage";
+import ContactPage from "./components/pages/ContactPage";
+import AboutPage from "./components/pages/AboutPage";
+import CareersPage from "./components/pages/CareersPage";
 const App = () => {
   return (
     <Router>
@@ -26,14 +26,13 @@ const App = () => {
             }
           />
           {/* Other routes */}
-          <Route path='/About' element={<About />} />
-          <Route path='/Careers' element={<Careers />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/Faq' element={<Faq />} />
+          <Route path='/About' element={<AboutPage />} />
+          <Route path='/Careers' element={<CareersPage />} />
+          <Route path='/Contact' element={<ContactPage />} />
+          <Route path='/Faq' element={<FaqPage />} />
         </Routes>
       </main>
     </Router>
   );
 };
-
 export default App;

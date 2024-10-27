@@ -1,4 +1,6 @@
 import "./program.css";
+import DotsImage from "../assets/images/programImages/program-dots.png";
+
 const Program = () => {
   const programTexts = [
     {
@@ -26,6 +28,7 @@ const Program = () => {
       paragraphBot: "Optimizing processes",
     },
   ];
+
   return (
     <section className='program-section py-20'>
       <div className='wrapper'>
@@ -33,20 +36,27 @@ const Program = () => {
           Program Structure
         </h2>
         <div className='program-content relative flex md:flex-row flex-col justify-between text-center gap-4'>
-          {programTexts.map((programText) => (
+          {programTexts.map((programText, index) => (
             <div
               key={programText.id}
-              className='flex flex-col items-center gap-10 w-full'
+              className='flex flex-col items-center lg:gap-10 gap-6 lg:max-w-fit'
             >
-              <div className='program-dots relative'>
-                <h3 className='program-steps relative font-bold text-center w-fit md:text-8xl text-5xl text-offWhite rounded-full'>
+              <div className='program-dots relative h-full w-full mb-10'>
+                <h3 className='program-steps w-fit relative font-bold text-center md:text-8xl text-5xl rounded-full'>
                   {programText.id}
                 </h3>
+                {index < programTexts.length - 1 && (
+                  <img
+                    className='absolute mediumLarge:block hidden top-[50%] -translate-y-[50%] -z-[3] left-[90%]'
+                    src={DotsImage}
+                    alt='dots'
+                  />
+                )}
               </div>
               <h3 className='font-bold md:text-2xl text-xl md:max-w-[200px] max-w-full'>
                 {programText.title}
               </h3>
-              <ul className='list-none'>
+              <ul className='list-none lg:mb-0 mb-14'>
                 <li className='md:text-xl text-lg font-semibold'>
                   {programText.paragraphTop}
                 </li>
@@ -61,4 +71,5 @@ const Program = () => {
     </section>
   );
 };
+
 export default Program;
