@@ -8,7 +8,7 @@ const Hero = () => {
           <Scene />
         </div>
         <div className='wrapper h-full top-0 left-[50%] -translate-x-[50%] z-30 absolute'>
-          <div className='hero-content md:px-20 md:items-start items-center w-full md:justify-center md:pt-0 pt-20 h-full flex flex-col md:gap-16 gap-10'>
+          <div className='hero-content md:items-start items-center w-full md:justify-center md:pt-0 pt-20 h-full flex flex-col md:gap-16 gap-10'>
             <h1 className='md:text-8xl mediumSmall:text-6xl text-5xl font-semibold md:text-left text-center text-gray-800'>
               Quantumzyme
             </h1>

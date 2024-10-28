@@ -1,7 +1,33 @@
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./program.css";
 import DotsImage from "../assets/images/programImages/program-dots.png";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Program = () => {
+  const bulbsRef = useRef([]);
+
+  useEffect(() => {
+    gsap.fromTo(
+      bulbsRef.current,
+      { x: window.innerWidth > 768 ? 150 : 50, autoAlpha: 0 }, // Start with reduced x offset on smaller screens
+      {
+        x: 0,
+        autoAlpha: 1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: bulbsRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   const programTexts = [
     {
       id: 1,
@@ -40,6 +66,7 @@ const Program = () => {
             <div
               key={programText.id}
               className='flex flex-col items-center lg:gap-10 gap-6 lg:max-w-fit'
+              ref={(el) => (bulbsRef.current[index] = el)}
             >
               <div className='program-dots relative h-full w-full mb-10'>
                 <h3 className='program-steps w-fit relative font-bold text-center md:text-8xl text-5xl rounded-full'>
