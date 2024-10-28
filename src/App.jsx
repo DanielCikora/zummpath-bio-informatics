@@ -10,9 +10,11 @@ import ContactPage from "./components/pages/ContactPage";
 import AboutPage from "./components/pages/AboutPage";
 import CareersPage from "./components/pages/CareersPage";
 import Footer from "./components/footer/Footer";
+import { ToastContainer } from "react-toastify";
 const App = () => {
   return (
     <Router>
+      <ToastContainer />
       <Header /> {/* Header is outside Routes, so it appears on all pages */}
       <main>
         <Routes>
