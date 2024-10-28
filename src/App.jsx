@@ -7,19 +7,18 @@ import Careers from "./components/careers/Careers";
 // Pages
 import FaqPage from "./components/pages/FaqPage";
 import ContactPage from "./components/pages/ContactPage";
-import AboutPage from "./components/pages/AboutPage";
 import CareersPage from "./components/pages/CareersPage";
 import Footer from "./components/footer/Footer";
 import { ToastContainer } from "react-toastify";
 import Eligibility from "./components/eligibility/Eligibility";
+import LearnMore from "./components/pages/LearnMore";
 const App = () => {
   return (
     <Router>
       <ToastContainer />
-      <Header /> {/* Header is outside Routes, so it appears on all pages */}
+      <Header />
       <main>
         <Routes>
-          {/* Home route with Hero and Brochure */}
           <Route
             path='/'
             element={
@@ -32,8 +31,7 @@ const App = () => {
               </>
             }
           />
-          {/* Other routes */}
-          <Route path='/About' element={<AboutPage />} />
+          <Route path='/LearnMore' element={<LearnMore />} />
           <Route path='/Careers' element={<CareersPage />} />
           <Route path='/Contact' element={<ContactPage />} />
           <Route path='/Faq' element={<FaqPage />} />

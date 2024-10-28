@@ -22,7 +22,7 @@ const Navigation = () => {
   };
   const navigationLinks = [
     { id: 0, href: "/", linkText: "Home" },
-    { id: 1, href: "/About", linkText: "About" },
+    { id: 1, href: "/LearnMore", linkText: "Learn More" },
     { id: 2, href: "/Contact", linkText: "Contact" },
     { id: 3, href: "/Careers", linkText: "Careers" },
     { id: 4, href: "/Faq", linkText: "FAQ" },
