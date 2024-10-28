@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import QuantumzimeLogoImage from "../assets/images/navigationImages/quantumzyme_logo.png";
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  // Control body overflow when the menu is open
   useEffect(() => {
     const body = document.querySelector("body");
     if (openMenu) {
@@ -32,7 +31,7 @@ const Navigation = () => {
     <nav>
       {/* Hamburger Button */}
       <button
-        className='menu-button md:p-4 p-3 fixed z-50'
+        className='menu-button md:p-4 p-3 fixed z-[9999]'
         onClick={toggleOpenMenu}
       >
         <div className='relative w-8 h-6 transform transition-all duration-300'>
@@ -56,7 +55,7 @@ const Navigation = () => {
       </button>
       {/* Sidebar */}
       <div
-        className={`fixed top-0 h-full md:w-64 md:text-left text-center w-full bg-royalGreen text-white transform transition-transform duration-300 z-40 ${
+        className={`fixed top-0 h-full md:w-64 md:text-left text-center w-full bg-royalGreen text-white transform transition-transform duration-300 z-50 ${
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -91,7 +90,7 @@ const Navigation = () => {
       {/* Overlay to close the menu */}
       {openMenu && (
         <div
-          className='fixed inset-0 bg-black opacity-50 z-30'
+          className='fixed inset-0 bg-black opacity-50 z-40'
           onClick={toggleOpenMenu}
         />
       )}
