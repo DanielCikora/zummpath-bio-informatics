@@ -47,14 +47,13 @@ const Brochure = () => {
   ];
 
   const [expandedCardIndex, setExpandedCardIndex] = useState(null);
-  const cardRefs = useRef([]); // Reference to store card elements
+  const cardRefs = useRef([]);
 
   const toggleViewMore = (index) => {
     setExpandedCardIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   useEffect(() => {
-    // GSAP animations for each card
     cardRefs.current.forEach((card, index) => {
       gsap.fromTo(
         card,
@@ -63,10 +62,10 @@ const Brochure = () => {
           opacity: 1,
           y: 0,
           duration: 1,
-          delay: index * 0.2, // Stagger effect by 0.2s for each card
+          delay: index * 0.2,
           scrollTrigger: {
             trigger: card,
-            start: "top 80%", // Start animation when card is 80% into viewport
+            start: "top 80%",
             toggleActions: "play none none none",
           },
         }
@@ -75,7 +74,9 @@ const Brochure = () => {
   }, []);
 
   return (
-    <section className='brochure md:py-0 py-20 min-h-dvh flex flex-col justify-center'>
+    <section className='brochure md:py-0 py-20 min-h-dvh flex flex-col justify-center overflow-hidden'>
+      {" "}
+      {/* Added overflow-hidden */}
       <div className='wrapper'>
         <div className='brochure-content flex flex-col gap-28'>
           <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen'>
@@ -84,10 +85,10 @@ const Brochure = () => {
           <div className='brochure-boxes flex lg:flex-row flex-col gap-5 lg:justify-between lg:items-start items-center'>
             {brochureCardsTexts.map((brochureCardsText, index) => (
               <div
-                className='bg-lightGreen overflow-hidden relative cursor-pointer min-h-[500px] flex flex-col bg-opacity-60 md:text-left text-center px-6 py-10 rounded-xl text-offWhite w-full max-w-[380px]'
+                className='bg-lightGreen relative cursor-pointer min-h-[500px] flex flex-col bg-opacity-60 md:text-left text-center px-6 py-10 rounded-xl text-offWhite w-full max-w-[380px] overflow-hidden' // Adjusted overflow hidden here
                 key={brochureCardsText.id}
                 onClick={() => toggleViewMore(index)}
-                ref={(el) => (cardRefs.current[index] = el)} // Attach each card to refs
+                ref={(el) => (cardRefs.current[index] = el)}
               >
                 <img
                   className={`absolute h-auto w-full lg:max-w-48 max-w-44 lg:top-3 top-6 -right-10 -z-[2] transition-opacity duration-500 ease-in-out ${
@@ -100,10 +101,10 @@ const Brochure = () => {
                   {brochureCardsText.title}
                 </h3>
                 <p
-                  className={`block text-black md:text-2xl text-xl overflow-hidden transition-all duration-1000 ease-in-out ${
+                  className={`block text-black md:text-2xl text-xl transition-all duration-1000 ease-in-out ${
                     expandedCardIndex === index
                       ? "max-h-[1000px] opacity-100 pb-2"
-                      : "max-h-0 opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   {brochureCardsText.paragraph}
@@ -127,4 +128,5 @@ const Brochure = () => {
     </section>
   );
 };
+
 export default Brochure;

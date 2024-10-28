@@ -104,9 +104,44 @@ const ContactPage = () => {
       />
       <div className='wrapper'>
         <div className='contact-content'>
-          <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen md:mb-24 mb-16'>
+          <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-gray-800 md:mb-24 mb-16'>
             Contact Us
           </h2>
+          <div className='contact-content__paragraph flex flex-col gap-4 mb-8'>
+            <p className='md:text-xl text-lg'>
+              Want to get in touch with us? We'd love to hear from you! Whether
+              you have questions about our services, need assistance, or are
+              curious to learn more about what we do, our team is here to help.
+              We're committed to providing insightful solutions and tailored
+              support for all your needs.
+            </p>
+            <p className='md:text-xl text-lg'>
+              Fill out the contact form below with your details, and a member of
+              our team will get back to you promptly. Please include as much
+              information as possible so we can direct your inquiry to the right
+              person. We value open communication and look forward to helping
+              you achieve your goals.
+            </p>
+            <p className='md:text-xl text-lg'>
+              For direct assistance, feel free to email us at{" "}
+              <a
+                href='mailto:info@quantumzyme.com'
+                className='text-royalGreen font-medium underline hover:text-gray-700'
+              >
+                info@quantumzyme.com
+              </a>{" "}
+              or give us a call at{" "}
+              <a
+                href='tel:+918022227977'
+                className='text-royalGreen font-medium underline hover:text-gray-700'
+              >
+                +91-80-22227977
+              </a>
+              . Your inquiries are important to us, and we aim to provide you
+              with a seamless and informative experience. Thank you for
+              considering us, and we can't wait to connect!
+            </p>
+          </div>
           <form
             onSubmit={handleSubmit}
             className='block w-full md:max-w-[50%] bg-offWhite'

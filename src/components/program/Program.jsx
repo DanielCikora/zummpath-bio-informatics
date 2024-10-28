@@ -56,7 +56,7 @@ const Program = () => {
   ];
 
   return (
-    <section className='program-section md:py-0 py-20 min-h-dvh flex flex-col justify-center'>
+    <section className='program-section md:py-0 py-20 min-h-dvh flex flex-col justify-center overflow-hidden'>
       <div className='wrapper'>
         <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen md:mb-32 mb-24'>
           Program Structure
