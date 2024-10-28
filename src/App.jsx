@@ -5,7 +5,7 @@ import Brochure from "./components/brochure/Brochure";
 import Program from "./components/program/Program";
 import Careers from "./components/careers/Careers";
 // Pages
-import About from "./components/pages/About";
+import LearnMore from "./components/pages/LearnMore";
 // import Careers from "./components/pages/Careers";
 import Contact from "./components/pages/Contact";
 import Faq from "./components/pages/Faq";
@@ -30,7 +30,7 @@ const App = () => {
             }
           />
           {/* Other routes */}
-          <Route path="/About" element={<About />} />
+          <Route path="/LearnMore" element={<LearnMore />} />
           {/* <Route path="/Careers" element={<Careers />} /> */}
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Faq" element={<Faq />} />
