@@ -75,7 +75,7 @@ const Brochure = () => {
   }, []);
 
   return (
-    <section className='brochure md:py-0 py-10 min-h-dvh h-full'>
+    <section className='brochure md:py-0 py-20 min-h-dvh flex flex-col justify-center'>
       <div className='wrapper'>
         <div className='brochure-content flex flex-col gap-28'>
           <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen'>
