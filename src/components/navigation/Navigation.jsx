@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import QuantumzimeLogoImage from "../assets/images/navigationImages/quantumzyme_logo.png";
+import ZummitLogo from "../assets/images/navigationImages/zummit_logo.png";
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
@@ -24,8 +24,7 @@ const Navigation = () => {
     { id: 0, href: "/", linkText: "Home" },
     { id: 1, href: "/LearnMore", linkText: "Learn More" },
     { id: 2, href: "/Contact", linkText: "Contact" },
-    { id: 3, href: "/Careers", linkText: "Careers" },
-    { id: 4, href: "/Faq", linkText: "FAQ" },
+    { id: 3, href: "/Faq", linkText: "FAQ" },
   ];
   return (
     <nav>
@@ -59,24 +58,24 @@ const Navigation = () => {
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className='flex flex-col pt-4 md:items-start items-center gap-10'>
-          <div className='block max-w-24 mx-auto'>
+        <div className='flex flex-col pt-16 md:items-start items-center gap-10'>
+          <div className='block max-w-48 mx-auto'>
             <Link className='block' to='/' onClick={closeMenu}>
               <img
                 className='block w-full h-auto'
-                src={QuantumzimeLogoImage}
-                alt='quantumzime-logo'
+                src={ZummitLogo}
+                alt='zummit-logo'
               />
             </Link>
           </div>
           <ul className='flex flex-col gap-4 self-center items-center'>
             {navigationLinks.map((navigationLink) => (
               <li
-                className='block cursor-pointer rounded-md w-fit hover:bg-black text-white transition duration-200'
+                className='block w-full cursor-pointer rounded-md text-center hover:bg-black text-white transition duration-200'
                 key={navigationLink.id}
               >
                 <Link
-                  className='block text-2xl py-2 px-1 w-fit font-semibold'
+                  className='block text-2xl py-2 px-3 w-full font-semibold'
                   to={navigationLink.href}
                   onClick={closeMenu} // Close the menu when clicking a link
                 >

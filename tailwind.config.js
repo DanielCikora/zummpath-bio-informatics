@@ -9,6 +9,8 @@ module.exports = {
         lightGreen: "#D3DCDA",
         lightGray: "#EAEEED",
         secondGray: "#D3DCDA",
+        mainOrange: "#EF4336",
+        mainYellow: "#F6B524",
       },
       screens: {
         mediumSmall: "500px",

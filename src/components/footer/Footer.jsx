@@ -63,23 +63,24 @@ const Footer = () => {
   ];
   return (
     <footer className='footer'>
-      <div className='footer-quantumzyme bg-lightGray w-full py-12'>
+      <div className='footer-zummitlabs bg-lightGray w-full py-12'>
         <div className='wrapper'>
           <div className='footer-quantumzume__content flex md:flex-row flex-col md:justify-between items-center'>
             <div className='quantumzyme-logo flex md:items-start items-center flex-col gap-2 md:mb-0 mb-10'>
               <Link
-                to='https://www.quantumzyme.com/'
+                to='https://www.zummitlabs.com/'
                 className='block'
                 target='_blank'
               >
                 <img
                   className='h-auto w-full md:max-w-52 max-w-40'
-                  src={QuantumzymeLogoFooter}
-                  alt='quantumzyme-logo'
+                  src={ZummitLogo}
+                  alt='zummitlogo-logo'
                 />
               </Link>
               <h3 className='font-semibold text-gray-800 md:text-sm text-xs'>
-                © {new Date().getFullYear()} Quantumzyme. All rights reserved.
+                © {new Date().getFullYear()} Zummit Infolabs. All rights
+                reserved.
               </h3>
             </div>
             <div className='footer-links flex md:flex-row flex-col md:gap-14 gap-gap-4'>
@@ -110,18 +111,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='footer-zummit bg-secondGray py-2'>
+      <div className='footer-quantumzyme bg-secondGray py-2'>
         <div className='wrapper'>
           <div className='flex items-center w-full justify-between md:flex-row flex-col gap-4'>
-            <Link to='https://www.zummitlabs.com/' className='block'>
+            <Link to='https://www.quantumzyme.com/' className='block'>
               <img
                 className='h-auto w-full md:max-w-36 max-w-28'
-                src={ZummitLogo}
-                alt='zummit-logo'
+                src={QuantumzymeLogoFooter}
+                alt='quantumzyme-logo'
               />
             </Link>
             <h3 className='font-semibold md:text-sm text-xs text-gray-800'>
-              © {new Date().getFullYear()} Zummit Infolabs. All rights reserved.
+              © {new Date().getFullYear()} . Quantumzyme All rights reserved.
             </h3>
             <div className='social-icons flex gap-4'>
               {socialLinks.map((social) => (
