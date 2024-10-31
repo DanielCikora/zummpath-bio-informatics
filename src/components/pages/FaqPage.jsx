@@ -5,29 +5,46 @@ import { Link } from "react-router-dom";
 const FAQPage = () => {
   const faqs = [
     {
-      question: "What is Quantumzyme's approach to bioinformatics?",
+      question: "What is the duration of the ZummPath program?",
       answer:
-        "Quantumzyme leverages advanced quantum computing and bioinformatics techniques to analyze complex biological data, accelerating drug discovery and innovation in personalized medicine.",
+        "The ZummPath program is a comprehensive 6-month training designed to equip participants with in-depth bioinformatics knowledge and hands-on skills.",
     },
     {
-      question: "How does bioinformatics help in drug discovery?",
+      question: "How can I apply to join ZummPath?",
       answer:
-        "Bioinformatics plays a crucial role in drug discovery by helping scientists analyze biological data, identify drug targets, and predict the efficacy of drugs, significantly reducing the time required for development.",
+        "To apply, please visit our Contact page and complete the application form. Our team will review your submission and reach out with further details on next steps.",
     },
     {
-      question: "How can I contact Quantumzyme for collaboration?",
+      question: "What is the cost of the ZummPath program?",
       answer:
-        "For collaboration inquiries, please fill out our contact form on the Contact page, or reach out directly via email at info@quantumzyme.com. We look forward to discussing potential partnerships.",
+        "The full program costs 59,999 rupees, which includes access to all training materials, resources, and expert mentorship throughout the duration of the course.",
     },
     {
-      question: "What services does Quantumzyme offer?",
+      question:
+        "Is there an opportunity for employment after completing ZummPath?",
       answer:
-        "Quantumzyme offers services in computational chemistry, quantum computing, and bioinformatics, with a focus on enabling faster and more effective drug development through cutting-edge technology.",
+        "Yes, exceptional participants may be considered for research assistant roles, allowing them to apply their skills in real-world bioinformatics projects with our industry partners.",
     },
     {
-      question: "How can bioinformatics help my research project?",
+      question: "What topics are covered in the ZummPath program?",
       answer:
-        "Bioinformatics can provide valuable insights into genetic, genomic, and proteomic data, helping you interpret results, identify patterns, and make informed decisions for your research project.",
+        "ZummPath covers key bioinformatics topics, including data analysis, computational biology, and programming, with a focus on practical, industry-relevant applications.",
+    },
+    {
+      question: "Who is ZummPath designed for?",
+      answer:
+        "The program is ideal for recent graduates, aspiring bioinformaticians, and professionals in related fields who want to deepen their expertise in bioinformatics.",
+    },
+    {
+      question:
+        "How does bioinformatics impact fields like drug discovery and personalized medicine?",
+      answer:
+        "Bioinformatics plays a vital role by helping scientists analyze complex biological data, identify potential drug targets, and understand genetic factors in disease, which accelerates progress in drug discovery and personalized healthcare.",
+    },
+    {
+      question: "How can bioinformatics help with my research?",
+      answer:
+        "Bioinformatics provides tools to analyze genetic, genomic, and proteomic data, allowing you to uncover patterns, interpret complex results, and make data-driven decisions in your research.",
     },
   ];
   const [openIndex, setOpenIndex] = useState(null);
@@ -53,7 +70,7 @@ const FAQPage = () => {
                 <span>{faq.question}</span>
                 <FontAwesomeIcon
                   icon={faChevronDown}
-                  className={`transform transition-transform duration-300 ${
+                  className={`block transform transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />

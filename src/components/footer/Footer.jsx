@@ -6,7 +6,7 @@ import {
   faXTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import QuantumzymeLogoFooter from "../assets/images/navigationImages/quantumzyme-logo-footer.png";
+import ZummpathLogo from "../assets/images/heroImages/zummpath-logo.png";
 import ZummitLogo from "../assets/images/navigationImages/zummit_logo.png";
 import "./footer.css";
 const Footer = () => {
@@ -74,13 +74,12 @@ const Footer = () => {
               >
                 <img
                   className='h-auto w-full md:max-w-52 max-w-40'
-                  src={ZummitLogo}
-                  alt='zummitlogo-logo'
+                  src={ZummpathLogo}
+                  alt='zummpath-logo'
                 />
               </Link>
               <h3 className='font-semibold text-gray-800 md:text-sm text-xs'>
-                © {new Date().getFullYear()} Zummit Infolabs. All rights
-                reserved.
+                © {new Date().getFullYear()} Zummpath. All rights reserved.
               </h3>
             </div>
             <div className='footer-links flex md:flex-row flex-col md:gap-14 gap-gap-4'>
@@ -111,18 +110,19 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='footer-quantumzyme bg-lightGreen py-2'>
+      <div className='footer-zummit bg-lightGreen py-2'>
         <div className='wrapper'>
           <div className='flex items-center w-full justify-between md:flex-row flex-col gap-4'>
-            <Link to='https://www.quantumzyme.com/' className='block'>
+            <Link to='https://www.zummitlabs.com/' className='block'>
               <img
                 className='h-auto w-full md:max-w-36 max-w-28'
-                src={QuantumzymeLogoFooter}
-                alt='quantumzyme-logo'
+                src={ZummitLogo}
+                alt='zummit-logo'
               />
             </Link>
             <h3 className='font-semibold md:text-sm text-xs text-gray-800'>
-              © {new Date().getFullYear()} . Quantumzyme All rights reserved.
+              © {new Date().getFullYear()} . Zummit Infolabs All rights
+              reserved.
             </h3>
             <div className='social-icons flex gap-4'>
               {socialLinks.map((social) => (

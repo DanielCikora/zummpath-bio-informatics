@@ -18,10 +18,13 @@ const Careers = () => {
           Careers
         </h2>
         <p className='careers-para bg-[#EAEEED] md:py-10 py-4 px-4 max-w-[1200px] mx-auto md:text-xl text-lg md:font-semibold text-center rounded-xl mb-24'>
-          Embark on a pathway to a career in bioinformatics with our structured
-          training program. Successfully completing all levels and passing the
-          final assessment can lead to potential roles as Research Assistants at
-          Quantumzyme, pending satisfactory performance.
+          Embark on a pathway to a career in bioinformatics with our structured,
+          <strong>6-month</strong> training program. For{" "}
+          <strong>₹59.999</strong>, you'll gain hands-on experience and
+          specialized bioinformatics skills. Successfully completing all levels
+          and passing the final assessment may lead to potential roles as
+          Research Assistants at Quantumzyme, depending on performance and
+          project needs.
         </p>
         <Link
           className='text-center bg-royalGreen text-offWhite text-xl font-semibold
