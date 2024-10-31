@@ -76,5 +76,4 @@ const FAQPage = () => {
     </section>
   );
 };
-
 export default FAQPage;

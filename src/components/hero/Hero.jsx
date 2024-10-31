@@ -1,5 +1,6 @@
 import Scene from "./Animation/Scene";
 import { Link } from "react-router-dom";
+import ZummpathLogoImage from "../assets/images/heroImages/zummpath-logo.png";
 const Hero = () => {
   return (
     <section className='hero relative w-full h-screen overflow-hidden'>
@@ -7,13 +8,14 @@ const Hero = () => {
         <Scene />
       </div>
       <div className='wrapper h-full top-0 left-[50%] -translate-x-[50%] z-30 absolute'>
-        <div className='hero-content md:items-start items-center w-full md:justify-center md:pt-0 pt-20 h-full flex flex-col md:gap-16 gap-10'>
-          <h1 className='md:text-8xl mediumSmall:text-6xl text-5xl font-semibold md:text-left text-center text-gray-800'>
-            Zummforge
-          </h1>
-          <h2 className='md:text-4xl mediumSmall:text-3xl text-2xl font-medium md:text-left text-center text-gray-800'>
-            Experience Immersive,
-            <br /> Hands-On Bioinformatics
+        <div className='hero-content md:items-start items-center w-full md:justify-center md:pt-0 pt-20 h-full flex flex-col md:gap-12 gap-10'>
+          <img
+            src={ZummpathLogoImage}
+            alt='zummpath-logo'
+            className='block h-auto w-full md:max-w-[500px] max-w-[400px]'
+          />
+          <h2 className='md:text-4xl mediumSmall:text-3xl text-2xl font-medium md:text-left text-center text-gray-800 md:max-w-96 max-w-full'>
+            Master Bioinformatics in 6 Months
           </h2>
           <div className='flex gap-4 md:flex-row flex-col w-full text-center'>
             <Link

@@ -111,7 +111,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='footer-quantumzyme bg-secondGray py-2'>
+      <div className='footer-quantumzyme bg-lightGreen py-2'>
         <div className='wrapper'>
           <div className='flex items-center w-full justify-between md:flex-row flex-col gap-4'>
             <Link to='https://www.quantumzyme.com/' className='block'>
