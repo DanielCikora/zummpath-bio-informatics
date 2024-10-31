@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ZummitLogo from "../assets/images/navigationImages/zummit_logo.png";
+import ZummpathLogoWhite from "../assets/images/navigationImages/zummpath-logo-white.png";
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
@@ -63,15 +63,15 @@ const Navigation = () => {
             <Link className='block' to='/' onClick={closeMenu}>
               <img
                 className='block w-full h-auto'
-                src={ZummitLogo}
-                alt='zummit-logo'
+                src={ZummpathLogoWhite}
+                alt='zummpath-logo-white'
               />
             </Link>
           </div>
           <ul className='flex flex-col gap-4 self-center items-center'>
             {navigationLinks.map((navigationLink) => (
               <li
-                className='block w-full cursor-pointer rounded-md text-center hover:bg-black text-white transition duration-200'
+                className='block w-full cursor-pointer rounded-md text-center hover:bg-gray-800 text-offWhite transition duration-200'
                 key={navigationLink.id}
               >
                 <Link

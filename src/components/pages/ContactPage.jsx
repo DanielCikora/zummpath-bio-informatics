@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import BenzeneImage from "../assets/images/careerImages/benzene.png";
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     from_name: "",
@@ -13,7 +12,6 @@ const ContactPage = () => {
     phone: "",
     message: "",
   });
-
   const [isFormComplete, setIsFormComplete] = useState(false);
 
   // Check if all fields are filled
@@ -53,7 +51,6 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { from_name, from_email, phone, message } = formData;
-
     // Check for field completion
     if (!from_name || !from_email || !phone || !message) {
       toast.error("Please fill in all the fields.");
@@ -110,10 +107,11 @@ const ContactPage = () => {
           <div className='contact-content__paragraph flex flex-col gap-4 mb-8'>
             <p className='md:text-xl text-lg'>
               Want to get in touch with us? We'd love to hear from you! Whether
-              you have questions about our services, need assistance, or are
-              curious to learn more about what we do, our team is here to help.
-              We're committed to providing insightful solutions and tailored
-              support for all your needs.
+              you have questions about our 6-month bioinformatics training
+              program for ₹59,999, are interested in a potential role as a
+              Research Assistant, or need assistance with our services, our team
+              is here to help. We're committed to providing insightful solutions
+              and tailored support for all your needs.
             </p>
             <p className='md:text-xl text-lg'>
               Fill out the contact form below with your details, and a member of
@@ -128,7 +126,7 @@ const ContactPage = () => {
                 href='mailto:info@quantumzyme.com'
                 className='text-royalGreen font-medium underline hover:text-gray-700'
               >
-                info@quantumzyme.com
+                zummpath@zummitlabs.com
               </a>{" "}
               or give us a call at{" "}
               <a
@@ -142,6 +140,7 @@ const ContactPage = () => {
               considering us, and we can't wait to connect!
             </p>
           </div>
+
           <form
             onSubmit={handleSubmit}
             className='block w-full md:max-w-[50%] bg-offWhite'
