@@ -38,9 +38,9 @@ const Footer = () => {
   ];
   const footerSections = [
     {
-      title: "Quantumzyme",
+      title: "Zummpath",
       links: [
-        { id: 1, name: "About Us", href: "/About" },
+        { id: 1, name: "Learn More", href: "/LearnMore" },
         { id: 2, name: "Contact", href: "/Contact" },
         { id: 3, name: "FAQs", href: "/Faq" },
       ],
@@ -48,16 +48,16 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
-        { id: 4, name: "Blog", href: "/Blog" },
+        { id: 4, name: "White Papers", href: "/White-paper" },
         { id: 5, name: "Case Studies", href: "/Case-studies" },
-        { id: 6, name: "White Papers", href: "/White-papers" },
+        { id: 6, name: "Blog", href: "/Blog" },
       ],
     },
     {
       title: "Support",
       links: [
-        { id: 8, name: "Help Center", href: "/Help-center" },
-        { id: 9, name: "Privacy Policy", href: "/Privacy-policy" },
+        { id: 8, name: "Privacy Policy", href: "/Privacy-policy" },
+        { id: 9, name: "Help Center", href: "/Help-center" },
       ],
     },
   ];
@@ -88,7 +88,7 @@ const Footer = () => {
                   key={index}
                   className='footer-section text-gray-800 md:text-left text-center'
                 >
-                  <h4 className='font-semibold mediumSmall:text-xl text-md mb-4'>
+                  <h4 className='font-semibold mediumSmall:text-2xl text-xl mb-4'>
                     {section.title}
                   </h4>
                   <ul className='flex flex-col gap-1 md:items-start items-center'>
@@ -97,7 +97,6 @@ const Footer = () => {
                         <Link
                           className='footer-link w-fit block mediumSmall:text-lg text-md'
                           to={link.href}
-                          target='_blank'
                         >
                           {link.name}
                         </Link>
@@ -115,7 +114,7 @@ const Footer = () => {
           <div className='flex items-center w-full justify-between md:flex-row flex-col gap-4'>
             <Link to='https://www.zummitlabs.com/' className='block'>
               <img
-                className='h-auto w-full md:max-w-36 max-w-28'
+                className='h-auto w-full md:max-w-40 max-w-36'
                 src={ZummitLogo}
                 alt='zummit-logo'
               />

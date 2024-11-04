@@ -68,10 +68,10 @@ const Navigation = () => {
               />
             </Link>
           </div>
-          <ul className='flex flex-col gap-4 self-center items-center'>
+          <ul className='flex flex-col w-full px-4 gap-4 self-center items-center'>
             {navigationLinks.map((navigationLink) => (
               <li
-                className='block w-full cursor-pointer rounded-md text-center hover:bg-gray-800 text-offWhite transition duration-200'
+                className='block w-full cursor-pointer rounded-md text-center hover:bg-[#EF4336] text-offWhite transition duration-200'
                 key={navigationLink.id}
               >
                 <Link

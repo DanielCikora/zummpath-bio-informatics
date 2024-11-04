@@ -13,7 +13,6 @@ const ContactPage = () => {
     message: "",
   });
   const [isFormComplete, setIsFormComplete] = useState(false);
-
   // Check if all fields are filled
   useEffect(() => {
     const { from_name, from_email, phone, message } = formData;
@@ -24,22 +23,18 @@ const ContactPage = () => {
         message.trim() !== ""
     );
   }, [formData]);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const handlePhoneChange = (value) => {
     setFormData({ ...formData, phone: value });
   };
-
   // Validate email format using regex
   const validateEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
     return emailPattern.test(email);
   };
-
   // Validate phone number
   const validatePhoneNumber = (phone) => {
     // Basic validation for the phone number.
@@ -47,7 +42,6 @@ const ContactPage = () => {
     const phonePattern = /^\+?\d{1,4}[-\s]?\d{1,14}$/; // Example for international format
     return phonePattern.test(phone);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { from_name, from_email, phone, message } = formData;
@@ -56,19 +50,16 @@ const ContactPage = () => {
       toast.error("Please fill in all the fields.");
       return;
     }
-
     // Validate email
     if (!validateEmail(from_email)) {
       toast.error("Please enter a valid email address.");
       return;
     }
-
     // Validate phone number
     if (!validatePhoneNumber(phone)) {
       toast.error("Please enter a valid phone number.");
       return;
     }
-
     emailjs
       .send(
         "service_vjl48eq",
@@ -86,7 +77,6 @@ const ContactPage = () => {
         toast.error("Error sending message, please try again.");
       });
   };
-
   return (
     <section className='contact relative z-[1] min-h-dvh bg-offWhite grid place-items-center py-20 overflow-hidden'>
       <img
