@@ -24,7 +24,6 @@ const WhitePaper = () => {
               , leaders in bioinformatics and computational solutions.
             </p>
           </section>
-
           {/* Problem Statement */}
           <section className='mb-8'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>
@@ -39,7 +38,6 @@ const WhitePaper = () => {
               bioinformatics skills.
             </p>
           </section>
-
           {/* Solution Overview */}
           <section className='mb-8'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>
@@ -54,7 +52,6 @@ const WhitePaper = () => {
               participants with industry-relevant skills.
             </p>
           </section>
-
           {/* Program Benefits */}
           <section className='mb-8'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>
@@ -83,7 +80,6 @@ const WhitePaper = () => {
               </li>
             </ul>
           </section>
-
           {/* Program Structure */}
           <section className='mb-8'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>
@@ -106,7 +102,6 @@ const WhitePaper = () => {
               foundational and advanced topics.
             </p>
           </section>
-
           {/* Call to Action */}
           <section className='mb-8'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>
@@ -126,7 +121,6 @@ const WhitePaper = () => {
               </Link>
             </div>
           </section>
-
           {/* Contact Information */}
           <section className='mt-12'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>

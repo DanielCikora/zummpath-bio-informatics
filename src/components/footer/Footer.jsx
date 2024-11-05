@@ -48,17 +48,13 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
-        { id: 4, name: "White Papers", href: "/White-paper" },
-        { id: 5, name: "Case Studies", href: "/Case-studies" },
-        { id: 6, name: "Blog", href: "/Blog" },
+        { id: 4, name: "White Paper", href: "/WhitePaper" },
+        { id: 5, name: "Blog", href: "/BlogPage" },
       ],
     },
     {
       title: "Support",
-      links: [
-        { id: 8, name: "Privacy Policy", href: "/Privacy-policy" },
-        { id: 9, name: "Help Center", href: "/Help-center" },
-      ],
+      links: [{ id: 6, name: "Privacy Policy", href: "/PrivacyPolicy" }],
     },
   ];
   return (

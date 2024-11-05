@@ -1,5 +1,5 @@
 import React from "react";
-import BlogVideo from "../assets/videos/3191573-hd_1920_1080_25fps.mp4";
+import BlogImage from "../assets/images/BlogImages/pexels-googledeepmind-18069423.jpg";
 const BlogPage = () => {
   const posts = [
     {
@@ -9,7 +9,7 @@ const BlogPage = () => {
       author:
         "Sam Barnett, Arina Puzriakova, Catherine Snow, Eleanor Williams, and Francisco Azuaje",
       date: "Oct 17, 2024",
-      link: "https://www.genomicsengland.co.uk/bioinformatics/blog/scouring-the-scientific-literature-with-large-language-models",
+      link: "https://www.genomicsengland.co.uk/bioinformatics/blog",
     },
     {
       title:
@@ -18,7 +18,7 @@ const BlogPage = () => {
         "This post introduces the context around variant-to-gene mapping, sharing the approach and information used to carry out the task.",
       author: "Elena Bernabeu and Chris Odhams",
       date: "Aug 1, 2024",
-      link: "https://www.genomicsengland.co.uk/bioinformatics/blog/understanding-genetic-links-to-disease",
+      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
     },
     {
       title: "What Does a Bioinformatician Do?",
@@ -26,7 +26,7 @@ const BlogPage = () => {
         "A discussion on how the Bioinformatics Operations team supports the journey of a genomic sample.",
       author: "Aminata Tengbe",
       date: "Jun 17, 2024",
-      link: "https://www.genomicsengland.co.uk/bioinformatics/blog/what-does-a-bioinformatician-do",
+      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
     },
     {
       title: "Pathology Whole Slide Images for Multimodal Cancer Research",
@@ -34,7 +34,7 @@ const BlogPage = () => {
         "This article discusses data quality and standards in digital pathology for machine learning research.",
       author: "Charlotte Jennings, Samuel Barnett, et al.",
       date: "Jun 6, 2024",
-      link: "https://www.genomicsengland.co.uk/bioinformatics/blog/pathology-whole-slide-images-for-multimodal-cancer-research",
+      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
     },
     {
       title: "Increasing Gene Coverage for Developmental Disorders",
@@ -42,28 +42,21 @@ const BlogPage = () => {
         "This post describes how an external resource was used to improve gene coverage for testing patients with developmental disorders.",
       author: "Achchuthan Shanmugasundram",
       date: "May 2, 2024",
-      link: "https://www.genomicsengland.co.uk/bioinformatics/blog/increasing-gene-coverage-for-developmental-disorders",
+      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
     },
   ];
-
   return (
-    <section className='bg-offWhite py-20'>
+    <section className='bg-offWhite py-20 relative'>
       <h1 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-gray-800 md:mb-24 mb-16'>
         Blogs
       </h1>
-      {/* Featured Post */}
       <div className='wrapper'>
         <div className='bg-white shadow-lg rounded-xl overflow-hidden mb-6'>
-          <video
-            autoPlay
-            muted
-            loop
-            className='w-full h-full max-h-[500px] object-cover'
-            src={BlogVideo}
-            alt='Featured Post Video'
-          >
-            Your browser does not support the video tag.
-          </video>
+          <img
+            className='h-auto w-full max-h-[500px] object-cover'
+            src={BlogImage}
+            alt='blog'
+          />
           <div className='p-6'>
             <h2 className='md:text-4xl text-3xl font-bold text-royalGreen'>
               Featured: Exploring Machine Learning in Bioinformatics
@@ -72,8 +65,8 @@ const BlogPage = () => {
               Machine learning is transforming the field of bioinformatics...
             </p>
             <a
-              href={posts}
-              className='inline-block mt-4 text-royalGreen font-semibold hover:underline'
+              href={posts[0].link}
+              className='inline-block cursor-pointer mt-4 text-royalGreen font-semibold hover:underline'
             >
               Read More
             </a>
@@ -99,7 +92,7 @@ const BlogPage = () => {
                     href={post.link}
                     target='_blank'
                     rel='noreferrer'
-                    className='inline-block mt-4 text-royalGreen font-semibold hover:underline'
+                    className='inline-block cursor-pointer mt-4 text-royalGreen font-semibold hover:underline'
                   >
                     Read More
                   </a>
