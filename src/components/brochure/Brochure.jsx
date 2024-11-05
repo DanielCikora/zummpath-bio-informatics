@@ -7,9 +7,7 @@ import SkillsImage from "../assets/images/brochureImages/skills.png";
 import TrainingImage from "../assets/images/brochureImages/training.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
-
 const Brochure = () => {
   const brochureCardsTexts = [
     {
@@ -45,14 +43,11 @@ const Brochure = () => {
       imageAlt: "career",
     },
   ];
-
   const [expandedCardIndex, setExpandedCardIndex] = useState(null);
   const cardRefs = useRef([]);
-
   const toggleViewMore = (index) => {
     setExpandedCardIndex((prevIndex) => (prevIndex === index ? null : index));
   };
-
   useEffect(() => {
     cardRefs.current.forEach((card, index) => {
       gsap.fromTo(
@@ -72,11 +67,8 @@ const Brochure = () => {
       );
     });
   }, []);
-
   return (
     <section className='brochure md:py-0 py-20 min-h-dvh flex flex-col justify-center overflow-hidden'>
-      {" "}
-      {/* Added overflow-hidden */}
       <div className='wrapper'>
         <div className='brochure-content flex flex-col gap-28'>
           <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen'>
@@ -111,12 +103,12 @@ const Brochure = () => {
                 </p>
                 {expandedCardIndex === index ? (
                   <FontAwesomeIcon
-                    className='block text-2xl max-w-fit font-bold rounded-full bg-royalGreen px-2.5 py-2'
+                    className='inline-block text-2xl w-fit max-w-fit font-bold rounded-full bg-royalGreen px-2.5 py-2'
                     icon={faMinus}
                   />
                 ) : (
                   <FontAwesomeIcon
-                    className='block text-2xl max-w-fit font-bold rounded-full bg-royalGreen px-2.5 py-2'
+                    className='inline-block text-2xl w-fit max-w-fit font-bold rounded-full bg-royalGreen px-2.5 py-2'
                     icon={faPlus}
                   />
                 )}
@@ -128,5 +120,4 @@ const Brochure = () => {
     </section>
   );
 };
-
 export default Brochure;
