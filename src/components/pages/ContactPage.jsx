@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import BenzeneImage from "../assets/images/careerImages/benzene.png";
+import axios from "axios";
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     from_name: "",
@@ -42,40 +42,31 @@ const ContactPage = () => {
     const phonePattern = /^\+?\d{1,4}[-\s]?\d{1,14}$/; // Example for international format
     return phonePattern.test(phone);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { from_name, from_email, phone, message } = formData;
-    // Check for field completion
+    // Check if form fields are filled
     if (!from_name || !from_email || !phone || !message) {
       toast.error("Please fill in all the fields.");
       return;
     }
-    // Validate email
-    if (!validateEmail(from_email)) {
-      toast.error("Please enter a valid email address.");
-      return;
-    }
-    // Validate phone number
-    if (!validatePhoneNumber(phone)) {
-      toast.error("Please enter a valid phone number.");
-      return;
-    }
-    emailjs
-      .send(
-        "service_vjl48eq",
-        "template_1b9u45b",
-        formData,
-        "hyoPHizzbRYKwmVf9"
-      )
-      .then((response) => {
-        console.log("Message sent successfully", response);
+    // Send POST request to backend using Axios
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/send-email",
+        formData
+      );
+      if (response.status === 200) {
         toast.success("Message sent successfully!");
+        // Clear the form data
         setFormData({ from_name: "", from_email: "", phone: "", message: "" });
-      })
-      .catch((error) => {
-        console.error("Error sending message", error);
-        toast.error("Error sending message, please try again.");
-      });
+      } else {
+        toast.error("Error sending message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Error sending message. Please try again.");
+    }
   };
   return (
     <section className='contact relative z-[1] min-h-dvh bg-offWhite grid place-items-center py-20 overflow-hidden'>
@@ -113,17 +104,10 @@ const ContactPage = () => {
             <p className='md:text-xl text-lg'>
               For direct assistance, feel free to email us at{" "}
               <a
-                href='mailto:info@quantumzyme.com'
+                href='mailto:Info.zummpath@zummitlabs.com'
                 className='text-royalGreen font-medium underline hover:text-gray-700'
               >
-                zummpath@zummitlabs.com
-              </a>{" "}
-              or give us a call at{" "}
-              <a
-                href='tel:+918022227977'
-                className='text-royalGreen font-medium underline hover:text-gray-700'
-              >
-                +91-80-22227977
+                Info.zummpath@zummitlabs.com
               </a>
               . Your inquiries are important to us, and we aim to provide you
               with a seamless and informative experience. Thank you for
