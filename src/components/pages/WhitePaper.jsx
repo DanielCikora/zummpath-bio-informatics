@@ -14,7 +14,7 @@ const WhitePaper = () => {
             </h2>
             <p className='text-xl'>
               Zummpath is a six-month, in-person bioinformatics Industrial
-              Training Program program conducted in Bangalore, India. Priced at{" "}
+              Training Program conducted in Bangalore, India. Priced at{" "}
               <strong>₹59,999</strong>, this intensive program is designed to
               empower aspiring bioinformaticians with practical skills in
               computational biology and bioinformatics, preparing them for
@@ -41,7 +41,7 @@ const WhitePaper = () => {
           {/* Solution Overview */}
           <section className='mb-8'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>
-              About the Zummpath Industrial Training Program Program
+              About the Zummpath Industrial Training Program
             </h2>
             <p className='text-xl'>
               The Zummpath Industrial Training Program aims to bridge this gap
@@ -109,9 +109,9 @@ const WhitePaper = () => {
             </h2>
             <p className='mb-8 text-xl'>
               Take the first step toward a rewarding career in bioinformatics
-              with the Zummpath Industrial Training Program Program. Gain
-              practical experience, work on real projects, and learn from the
-              best in the industry.
+              with the Zummpath Industrial Training Program. Gain practical
+              experience, work on real projects, and learn from the best in the
+              industry.
             </p>
             <div className='text-center'>
               <Link
@@ -136,9 +136,9 @@ const WhitePaper = () => {
                 <strong>Email:</strong>{" "}
                 <a
                   className='inline-block text-royalGreen font-semibold'
-                  href='mailto:zummpath@zummpath.com'
+                  href='mailto:Info.zummpath@zummitlabs.com'
                 >
-                  zummpath@zummpath.com
+                  Info.zummpath@zummitlabs.com
                 </a>
               </li>
               <li>

@@ -7,7 +7,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import ZummpathLogo from "../assets/images/heroImages/zummpath-logo.png";
-import ZummitLogo from "../assets/images/navigationImages/zummit_logo.png";
+import ZummitLogo from "../assets/images/navigationImages/zummit-logo.png";
 import "./footer.css";
 const Footer = () => {
   const socialLinks = [

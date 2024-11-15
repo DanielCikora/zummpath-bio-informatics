@@ -110,9 +110,9 @@ const PrivacyPolicy = () => {
             <strong>
               <a
                 className='inline-block text-royalGreen font-semibold'
-                href='mailto:zummpath@zummitlabs.com'
+                href='mailto:Info.zummpath@zummitlabs.com'
               >
-                zummpath@zummitlabs.com
+                Info.zummpath@zummitlabs.com
               </a>
             </strong>
             .
@@ -164,9 +164,9 @@ const PrivacyPolicy = () => {
               <strong>Email</strong>:{" "}
               <a
                 className='inline-block text-royalGreen font-semibold'
-                href='mailto:zummpath@zummitlabs.com'
+                href='mailto:Info.zummpath@zummitlabs.com'
               >
-                zummpath@zummitlabs.com
+                Info.zummpath@zummitlabs.com
               </a>
             </li>
             <li>

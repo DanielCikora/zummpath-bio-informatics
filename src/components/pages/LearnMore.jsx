@@ -23,7 +23,6 @@ const LearnMore = () => {
               <br />
               Fee
             </h2>
-
             <h2 className='text-6xl max-w-[1000px]'>₹ 59,999.99</h2>
             <div className='flex flex-col gap-3 ml-auto'>
               <p className='text-xl text-center'>in partenership</p>
@@ -90,9 +89,9 @@ const LearnMore = () => {
             </h2>
             <ul className='list-disc text-xl max-w-[1000px] pl-5'>
               <li>
-                Foundation of Insilico Techniques Start with core bioinformatics
-                principles and basic computational skills to establish a strong
-                foundation.
+                Foundation of In silico Techniques Start with core
+                bioinformatics principles and basic computational skills to
+                establish a strong foundation.
               </li>
               <li>
                 Advanced Analysis Tools Develop your analytical abilities with

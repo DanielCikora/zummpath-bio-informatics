@@ -22,9 +22,7 @@ const Eligibility = () => {
                 className='h-auto w-full max-w-40 block'
               />
               <div className='flex flex-col gap-4 mediumSmall:text-left text-center'>
-                <h3 className='text-2xl font-semibold'>
-                  MSc, BE/BTech, ME/MTech
-                </h3>
+                <h3 className='text-2xl font-semibold'>MSc, ME/MTech</h3>
                 <p className='text-xl'>
                   In Biotechnology, Bioinformatics, Biochemistry, or Chemistry
                 </p>

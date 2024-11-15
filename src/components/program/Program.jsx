@@ -31,19 +31,19 @@ const Program = () => {
   const programTexts = [
     {
       id: 1,
-      title: "Basic Insilico Concepts",
+      title: "Basic In silico Concepts",
       paragraphTop: "Fundamental bioinformatics",
       paragraphBot: "Launchpad for exploration",
     },
     {
       id: 2,
-      title: "Advanced Insilico Techniques",
+      title: "Advanced In silico Techniques",
       paragraphTop: "Bioinformatics techniques",
       paragraphBot: "Enhancing your skill set",
     },
     {
       id: 3,
-      title: "Advanced Insilico Modeling",
+      title: "Advanced In silico Modeling",
       paragraphTop: "Complex modeling techniques",
       paragraphBot: "Real-world challenges",
     },

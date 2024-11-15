@@ -77,7 +77,7 @@ const Brochure = () => {
           <div className='brochure-boxes flex lg:flex-row flex-col gap-5 lg:justify-between lg:items-start items-center'>
             {brochureCardsTexts.map((brochureCardsText, index) => (
               <div
-                className='bg-lightGreen relative cursor-pointer min-h-[500px] flex flex-col bg-opacity-60 md:text-left text-center px-6 py-10 rounded-xl text-offWhite w-full max-w-[380px] overflow-hidden' // Adjusted overflow hidden here
+                className='bg-lightGreen relative cursor-pointer min-h-[500px] flex flex-col bg-opacity-60 md:text-left text-center px-6 py-10 rounded-xl text-offWhite w-full max-w-[380px] overflow-hidden'
                 key={brochureCardsText.id}
                 onClick={() => toggleViewMore(index)}
                 ref={(el) => (cardRefs.current[index] = el)}
