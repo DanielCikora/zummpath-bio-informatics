@@ -5,7 +5,7 @@ const WhitePaper = () => {
       <div className=' text-gray-800 py-20'>
         <div className='wrapper'>
           <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-gray-800 md:mb-24 mb-16'>
-            Zummpath Bioinformatics Internship
+            Zummpath Bioinformatics Industrial Training Program
           </h2>
           {/* Executive Summary */}
           <section className='mb-8'>
@@ -13,13 +13,13 @@ const WhitePaper = () => {
               Executive Summary
             </h2>
             <p className='text-xl'>
-              Zummpath is a six-month, in-person bioinformatics internship
-              program conducted in Bangalore, India. Priced at{" "}
+              Zummpath is a six-month, in-person bioinformatics Industrial
+              Training Program program conducted in Bangalore, India. Priced at{" "}
               <strong>₹59,999</strong>, this intensive program is designed to
               empower aspiring bioinformaticians with practical skills in
               computational biology and bioinformatics, preparing them for
-              advanced roles in research and industry. The internship is brought
-              to you by a strategic partnership between
+              advanced roles in research and industry. The Industrial Training
+              Program is brought to you by a strategic partnership between
               <strong> Zummit Infolabs</strong> and <strong>Quantumzyme</strong>
               , leaders in bioinformatics and computational solutions.
             </p>
@@ -41,15 +41,15 @@ const WhitePaper = () => {
           {/* Solution Overview */}
           <section className='mb-8'>
             <h2 className='text-3xl md:text-left text-center font-semibold text-royalGreen mb-2 mt-8'>
-              About the Zummpath Internship Program
+              About the Zummpath Industrial Training Program Program
             </h2>
             <p className='text-xl'>
-              The Zummpath Internship aims to bridge this gap by providing
-              in-depth training in bioinformatics, computational biology, and
-              related technologies. Designed by industry experts from Zummit
-              Infolabs and Quantumzyme, this program combines hands-on projects,
-              mentorship, and exposure to real-world applications to equip
-              participants with industry-relevant skills.
+              The Zummpath Industrial Training Program aims to bridge this gap
+              by providing in-depth training in bioinformatics, computational
+              biology, and related technologies. Designed by industry experts
+              from Zummit Infolabs and Quantumzyme, this program combines
+              hands-on projects, mentorship, and exposure to real-world
+              applications to equip participants with industry-relevant skills.
             </p>
           </section>
           {/* Program Benefits */}
@@ -86,8 +86,8 @@ const WhitePaper = () => {
               Program Structure and Curriculum
             </h2>
             <p className='text-xl'>
-              The Zummpath Internship is organized into several key modules
-              covering core areas in bioinformatics, including:
+              The Zummpath Industrial Training Program is organized into several
+              key modules covering core areas in bioinformatics, including:
             </p>
             <ul className='list-disc pl-6 mb-4 text-xl'>
               <li>Introduction to Bioinformatics and Computational Biology</li>
@@ -109,8 +109,9 @@ const WhitePaper = () => {
             </h2>
             <p className='mb-8 text-xl'>
               Take the first step toward a rewarding career in bioinformatics
-              with the Zummpath Internship Program. Gain practical experience,
-              work on real projects, and learn from the best in the industry.
+              with the Zummpath Industrial Training Program Program. Gain
+              practical experience, work on real projects, and learn from the
+              best in the industry.
             </p>
             <div className='text-center'>
               <Link
@@ -127,8 +128,8 @@ const WhitePaper = () => {
               Contact Us
             </h2>
             <p className='text-xl'>
-              For any inquiries about the Zummpath Internship Program, please
-              reach out:
+              For any inquiries about the Zummpath Industrial Training Program
+              Program, please reach out:
             </p>
             <ul className='list-none mt-4 text-xl'>
               <li>

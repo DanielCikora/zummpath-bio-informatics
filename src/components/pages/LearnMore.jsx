@@ -3,62 +3,62 @@ import ZummitImg from "../assets/images/learnmoreimages/Zummit.png";
 
 const LearnMore = () => {
   return (
-    <article className="learn-more">
-      <div className="wrapper">
-        <div className="learn-more__content py-16">
-          <h1 className="text-5xl font-semibold text-royalGreen text-center">
+    <article className='learn-more'>
+      <div className='wrapper'>
+        <div className='learn-more__content py-16'>
+          <h1 className='text-5xl font-semibold text-royalGreen text-center'>
             Learn More
           </h1>
-          <div className="flex items-center">
+          <div className='flex items-center'>
             <img
               src={QuantumzymeImg}
-              alt="Quantumzyme-Logo-Image"
-              className="h-auto w-full max-w-40 block ml-auto"
+              alt='Quantumzyme-Logo-Image'
+              className='h-auto w-full max-w-40 block ml-auto'
             />
           </div>
 
-          <div className="flex items-center py-9">
-            <h2 className="text-3xl font-semibold w-[200px] pr-5">
+          <div className='flex items-center py-9'>
+            <h2 className='text-3xl font-semibold w-[200px] pr-5'>
               Program
               <br />
               Fee
             </h2>
 
-            <h2 className="text-6xl max-w-[1000px]">₹ 59,999.99</h2>
-            <div className="flex flex-col gap-3 ml-auto">
-              <p className="text-xl text-center">in partenership</p>
+            <h2 className='text-6xl max-w-[1000px]'>₹ 59,999.99</h2>
+            <div className='flex flex-col gap-3 ml-auto'>
+              <p className='text-xl text-center'>in partenership</p>
               <img
                 src={ZummitImg}
-                alt="Zummit-Logo-Image"
-                className="h-auto w-full max-w-40 block"
+                alt='Zummit-Logo-Image'
+                className='h-auto w-full max-w-40 block'
               />
             </div>
           </div>
-          <hr className="h-2 w-full bg-royalGreen"></hr>
-          <div className="flex items-center py-9">
-            <h2 className="text-3xl font-semibold w-[200px] pr-5">
+          <hr className='h-2 w-full bg-royalGreen'></hr>
+          <div className='flex items-center py-9'>
+            <h2 className='text-3xl font-semibold w-[200px] pr-5'>
               Program
               <br />
               Highlights
             </h2>
-            <p className="text-xl max-w-[1000px]">
+            <p className='text-xl max-w-[1000px]'>
               Jumpstart your bioinformatics career with a specialized training
               program that combines knowledge, hands-on experience, and direct
               industry exposure. Our partnership with Quantumzyme offers
               participants an in-depth look into molecular simulations, enzyme
               engineering, and computational biology, culminating in a
-              guaranteed six-month internship that can propel your career
-              forward.
+              guaranteed six-month Industrial Training Program that can propel
+              your career forward.
             </p>
           </div>
-          <hr className="h-0.5 w-full bg-gray-400"></hr>
-          <div className="flex items-center py-9">
-            <h2 className="text-3xl font-semibold w-[200px] pr-5">
+          <hr className='h-0.5 w-full bg-gray-400'></hr>
+          <div className='flex items-center py-9'>
+            <h2 className='text-3xl font-semibold w-[200px] pr-5'>
               Our
               <br />
               Advantages
             </h2>
-            <ul className="list-disc text-xl max-w-[1000px] pl-5">
+            <ul className='list-disc text-xl max-w-[1000px] pl-5'>
               <li>
                 Expert-Guided Learning: Learn from industry leaders and
                 bioinformatics specialists who bring real-world insights and
@@ -69,9 +69,10 @@ const LearnMore = () => {
                 projects that mirror industry needs, making you career-ready.
               </li>
               <li>
-                Exclusive Internship Opportunity: Secure a six-month internship
-                at Quantumzyme’s lab in Bangalore, giving you unparalleled
-                exposure to enzyme engineering and research projects.
+                Exclusive Industrial Training Program Opportunity: Secure a
+                six-month Industrial Training Program at Quantumzyme's lab in
+                Bangalore, giving you unparalleled exposure to enzyme
+                engineering and research projects.
               </li>
               <li>
                 Seamless Career Transition: Outstanding interns may transition
@@ -80,14 +81,14 @@ const LearnMore = () => {
               </li>
             </ul>
           </div>
-          <hr className="h-0.5 w-full bg-gray-400"></hr>
-          <div className="flex items-center py-9">
-            <h2 className="text-3xl font-semibold w-[200px] pr-5">
+          <hr className='h-0.5 w-full bg-gray-400'></hr>
+          <div className='flex items-center py-9'>
+            <h2 className='text-3xl font-semibold w-[200px] pr-5'>
               Curriculum
               <br />
               Roadmap
             </h2>
-            <ul className="list-disc text-xl max-w-[1000px] pl-5">
+            <ul className='list-disc text-xl max-w-[1000px] pl-5'>
               <li>
                 Foundation of Insilico Techniques Start with core bioinformatics
                 principles and basic computational skills to establish a strong

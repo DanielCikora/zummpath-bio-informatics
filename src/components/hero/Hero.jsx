@@ -15,7 +15,7 @@ const Hero = () => {
             className='block h-auto w-full md:max-w-[500px] max-w-[400px]'
           />
           <h2 className='md:text-4xl mediumSmall:text-3xl text-2xl font-medium md:text-left text-center text-gray-800 md:max-w-96 max-w-full'>
-            Master Bioinformatics in 6 Months
+            Bioinformatics Industrial Training in 6 Months
           </h2>
           <div className='flex gap-4 md:flex-row flex-col w-full text-center'>
             <Link

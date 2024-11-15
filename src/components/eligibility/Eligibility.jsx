@@ -38,7 +38,7 @@ const Eligibility = () => {
               />
               <div className='flex flex-col gap-4 mediumSmall:text-left text-center'>
                 <h3 className='text-2xl font-semibold'>
-                  Statement or Letter of Intent
+                  Appropriate certificates or copies of Education
                 </h3>
                 <p className='text-xl'>
                   From your College/University Head of Department (HoD), if

@@ -28,9 +28,9 @@ const Brochure = () => {
     },
     {
       id: 2,
-      title: "Guaranteed Internship",
+      title: "Guaranteed Industrial Training",
       paragraph:
-        "Upon completion of the training, secure a six-month internship at Quantumzyme, Bangalore, a leader in enzyme engineering. Work on real-world projects and apply your newly acquired skills in a dynamic environment.",
+        "Upon completion of the training, secure a six-month Industrial Training Program at Quantumzyme, Bangalore, a leader in enzyme engineering. Work on real-world projects and apply your newly acquired skills in a dynamic environment.",
       imageSource: InternshipImage,
       imageAlt: "internship",
     },
@@ -38,7 +38,7 @@ const Brochure = () => {
       id: 3,
       title: "Career Pathway",
       paragraph:
-        "This internship serves as a launchpad for potential full-time roles, like Research Assistant, at Quantumzyme. Take your first step toward a fulfilling career in bioinformatics.",
+        "This Industrial Training Program serves as a launchpad for potential full-time roles, like Research Assistant, at Quantumzyme. Take your first step toward a fulfilling career in bioinformatics.",
       imageSource: CareerImage,
       imageAlt: "career",
     },

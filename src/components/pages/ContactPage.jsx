@@ -14,6 +14,7 @@ const ContactPage = () => {
   });
   const [isFormComplete, setIsFormComplete] = useState(false);
   // Check if all fields are filled
+
   useEffect(() => {
     const { from_name, from_email, phone, message } = formData;
     setIsFormComplete(
@@ -44,28 +45,18 @@ const ContactPage = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { from_name, from_email, phone, message } = formData;
-    // Check if form fields are filled
-    if (!from_name || !from_email || !phone || !message) {
-      toast.error("Please fill in all the fields.");
-      return;
-    }
-    // Send POST request to backend using Axios
+
     try {
       const response = await axios.post(
         "http://localhost:5000/send-email",
         formData
       );
-      if (response.status === 200) {
-        toast.success("Message sent successfully!");
-        // Clear the form data
-        setFormData({ from_name: "", from_email: "", phone: "", message: "" });
-      } else {
-        toast.error("Error sending message. Please try again.");
-      }
+      console.log("Email sent successfully:", response.data);
+      toast.success("Email sent successfully!");
+      setFormData({ from_name: "", from_email: "", phone: "", message: "" }); // Clear form after success
     } catch (error) {
-      console.error("Error:", error);
-      toast.error("Error sending message. Please try again.");
+      console.error("Error sending email:", error);
+      toast.error("Error sending email, please try again.");
     }
   };
   return (
