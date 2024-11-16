@@ -1,36 +1,16 @@
-.program-steps {
-  color: black;
-  cursor: pointer;
+.circle-container {
   position: relative;
-  display: inline-block;
 }
-.program-steps:hover {
-  color: white;
-}
-.program-steps::before,
-.program-steps::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: background-color 0.3s ease;
-}
-.program-steps::before {
-  width: 170px;
-  height: 170px;
-  background-color: #003c2c;
-  z-index: -2;
-}
-.program-steps::after {
-  width: 160px;
-  height: 160px;
+
+.outer-circle {
   background-color: white;
-  z-index: -1;
+  transition: background-color 0.3s ease-in-out; /* Smooth color change for fallback */
 }
-.program-steps:hover::after {
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-  color: white;
+
+.inner-circle {
+  background-color: white;
+}
+.program-steps {
+  transition: color 0.5s ease-in-out;
+  color: black; /* Default text color */
 }
