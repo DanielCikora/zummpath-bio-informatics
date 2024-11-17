@@ -5,6 +5,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import BenzeneImage from "../assets/images/careerImages/benzene.png";
 import axios from "axios";
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     from_name: "",
@@ -12,53 +13,69 @@ const ContactPage = () => {
     phone: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
   const [isFormComplete, setIsFormComplete] = useState(false);
-  // Check if all fields are filled
 
   useEffect(() => {
     const { from_name, from_email, phone, message } = formData;
-    setIsFormComplete(
+    const isComplete =
       from_name.trim() !== "" &&
-        from_email.trim() !== "" &&
-        phone.trim() !== "" &&
-        message.trim() !== ""
-    );
+      from_email.trim() !== "" &&
+      phone.trim() !== "" &&
+      message.trim() !== "" &&
+      validateEmail(from_email) &&
+      validatePhoneNumber(phone);
+    setIsFormComplete(isComplete);
   }, [formData]);
+
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+
+  const validatePhoneNumber = (phone) => {
+    const phonePattern = /^\+?\d{1,4}[-\s]?\d{1,14}$/;
+    return phonePattern.test(phone);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    if (name === "from_email" && !validateEmail(value)) {
+      setErrors((prev) => ({ ...prev, email: "Invalid email format" }));
+    } else {
+      setErrors((prev) => ({ ...prev, email: "" }));
+    }
   };
+
   const handlePhoneChange = (value) => {
     setFormData({ ...formData, phone: value });
+    if (!validatePhoneNumber(value)) {
+      setErrors((prev) => ({ ...prev, phone: "Invalid phone number" }));
+    } else {
+      setErrors((prev) => ({ ...prev, phone: "" }));
+    }
   };
-  // Validate email format using regex
-  const validateEmail = (email) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
-    return emailPattern.test(email);
-  };
-  // Validate phone number
-  const validatePhoneNumber = (phone) => {
-    // Basic validation for the phone number.
-    // Adjust the regex according to the expected phone number format.
-    const phonePattern = /^\+?\d{1,4}[-\s]?\d{1,14}$/; // Example for international format
-    return phonePattern.test(phone);
-  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isFormComplete) {
+      toast.error("Please fix the errors before submitting.");
+      return;
+    }
 
     try {
       const response = await axios.post(
         "http://localhost:5000/send-email",
         formData
       );
-      console.log("Email sent successfully:", response.data);
       toast.success("Email sent successfully!");
-      setFormData({ from_name: "", from_email: "", phone: "", message: "" }); // Clear form after success
+      setFormData({ from_name: "", from_email: "", phone: "", message: "" });
     } catch (error) {
-      console.error("Error sending email:", error);
       toast.error("Error sending email, please try again.");
     }
   };
+
   return (
     <section className='contact relative z-[1] min-h-dvh bg-offWhite grid place-items-center py-20 overflow-hidden'>
       <img
@@ -80,10 +97,11 @@ const ContactPage = () => {
             <p className='md:text-xl text-lg'>
               Want to get in touch with us? We'd love to hear from you! Whether
               you have questions about our 6-month bioinformatics training
-              program for ₹59,999, are interested in a potential role as a
-              Research Assistant, or need assistance with our services, our team
-              is here to help. We're committed to providing insightful solutions
-              and tailored support for all your needs.
+              program for <strong>₹59,999</strong>, are interested in a
+              potential role as a Research Assistant, or need assistance with
+              our services, our team is here to help. We're committed to
+              providing insightful solutions and tailored support for all your
+              needs.
             </p>
             <p className='md:text-xl text-lg'>
               Fill out the contact form below with your details, and a member of
@@ -137,6 +155,9 @@ const ContactPage = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.email && (
+                <span className='text-red-500'>{errors.email}</span>
+              )}
             </div>
             <div className='mb-4'>
               <label className='block font-medium md:text-lg text-md text-gray-700 mb-1'>
@@ -151,6 +172,9 @@ const ContactPage = () => {
                 international
                 className='w-full md:text-lg text-md p-3 border border-solid border-royalGreen rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800'
               />
+              {errors.phone && (
+                <span className='text-red-500'>{errors.phone}</span>
+              )}
             </div>
             <div className='mb-4'>
               <label className='block font-medium md:text-lg text-md text-gray-700 mb-1'>

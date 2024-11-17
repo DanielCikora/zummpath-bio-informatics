@@ -7,7 +7,7 @@ const Eligibility = () => {
   return (
     <section className='eligibility pt-16'>
       <div className='wrapper'>
-        <h2 className='eligibility-title text-center text-6xl font-semibold text-royalGreen'>
+        <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen md:mb-32 mb-24'>
           Eligibility
         </h2>
         <h3 className='text-2xl text-center my-10'>
