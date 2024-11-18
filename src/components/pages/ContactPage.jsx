@@ -4,8 +4,10 @@ import "react-toastify/dist/ReactToastify.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import BenzeneImage from "../assets/images/careerImages/benzene.png";
-import axios from "axios";
-
+import emailjs from "emailjs-com";
+const nameRegex = /^[A-Za-z\s]+$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const phoneRegex = /^\+?[1-9]\d{1,14}$/;
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     from_name: "",
@@ -13,69 +15,48 @@ const ContactPage = () => {
     phone: "",
     message: "",
   });
-  const [errors, setErrors] = useState({});
-  const [isFormComplete, setIsFormComplete] = useState(false);
-
-  useEffect(() => {
-    const { from_name, from_email, phone, message } = formData;
-    const isComplete =
-      from_name.trim() !== "" &&
-      from_email.trim() !== "" &&
-      phone.trim() !== "" &&
-      message.trim() !== "" &&
-      validateEmail(from_email) &&
-      validatePhoneNumber(phone);
-    setIsFormComplete(isComplete);
-  }, [formData]);
-
-  const validateEmail = (email) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  };
-
-  const validatePhoneNumber = (phone) => {
-    const phonePattern = /^\+?\d{1,4}[-\s]?\d{1,14}$/;
-    return phonePattern.test(phone);
-  };
-
+  const [isFormValid, setIsFormValid] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    if (name === "from_email" && !validateEmail(value)) {
-      setErrors((prev) => ({ ...prev, email: "Invalid email format" }));
-    } else {
-      setErrors((prev) => ({ ...prev, email: "" }));
-    }
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
   const handlePhoneChange = (value) => {
-    setFormData({ ...formData, phone: value });
-    if (!validatePhoneNumber(value)) {
-      setErrors((prev) => ({ ...prev, phone: "Invalid phone number" }));
-    } else {
-      setErrors((prev) => ({ ...prev, phone: "" }));
-    }
+    setFormData((prevData) => ({ ...prevData, phone: value }));
   };
-
-  const handleSubmit = async (e) => {
+  const validateForm = () => {
+    const isValid =
+      nameRegex.test(formData.from_name) &&
+      emailRegex.test(formData.from_email) &&
+      phoneRegex.test(formData.phone) &&
+      formData.message.trim() !== "";
+    setIsFormValid(isValid);
+  };
+  useEffect(() => {
+    validateForm();
+  }, [formData]);
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!isFormComplete) {
-      toast.error("Please fix the errors before submitting.");
-      return;
-    }
-
-    try {
-      const response = await axios.post(
-        "http://localhost:5000/send-email",
-        formData
-      );
-      toast.success("Email sent successfully!");
-      setFormData({ from_name: "", from_email: "", phone: "", message: "" });
-    } catch (error) {
-      toast.error("Error sending email, please try again.");
-    }
+    const dataToSend = {
+      ...formData,
+      subject: "Zummpath Bioinformatics Query",
+    };
+    emailjs
+      .send(
+        "service_wv4e51v",
+        "template_57aj9o8",
+        dataToSend,
+        "Tjxl8Vi15weJhGFl_"
+      )
+      .then((response) => {
+        console.log("Message sent successfully", response);
+        toast.success("Message sent successfully!");
+        setFormData({ from_name: "", from_email: "", phone: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("Error sending message", error);
+        toast.error("Error sending message, please try again.");
+      });
   };
-
   return (
     <section className='contact relative z-[1] min-h-dvh bg-offWhite grid place-items-center py-20 overflow-hidden'>
       <img
@@ -123,7 +104,6 @@ const ContactPage = () => {
               considering us, and we can't wait to connect!
             </p>
           </div>
-
           <form
             onSubmit={handleSubmit}
             className='block w-full md:max-w-[50%] bg-offWhite'
@@ -141,7 +121,13 @@ const ContactPage = () => {
                 onChange={handleChange}
                 required
               />
+              {!nameRegex.test(formData.from_name) && formData.from_name && (
+                <p className='text-red-500 text-xs'>
+                  Name should only contain letters and spaces.
+                </p>
+              )}
             </div>
+
             <div className='mb-4'>
               <label className='block font-medium md:text-lg text-md text-gray-700 mb-1'>
                 Your Email
@@ -155,27 +141,32 @@ const ContactPage = () => {
                 onChange={handleChange}
                 required
               />
-              {errors.email && (
-                <span className='text-red-500'>{errors.email}</span>
+              {!emailRegex.test(formData.from_email) && formData.from_email && (
+                <p className='text-red-500 text-xs'>
+                  Please enter a valid email address.
+                </p>
               )}
             </div>
+
             <div className='mb-4'>
               <label className='block font-medium md:text-lg text-md text-gray-700 mb-1'>
                 Your Phone Number
               </label>
               <PhoneInput
-                placeholder='Enter phone number'
+                defaultCountry='IN'
                 value={formData.phone}
                 onChange={handlePhoneChange}
-                defaultCountry='IN'
                 required
                 international
                 className='w-full md:text-lg text-md p-3 border border-solid border-royalGreen rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800'
               />
-              {errors.phone && (
-                <span className='text-red-500'>{errors.phone}</span>
+              {!phoneRegex.test(formData.phone) && formData.phone && (
+                <p className='text-red-500 text-xs'>
+                  Please enter a valid phone number.
+                </p>
               )}
             </div>
+
             <div className='mb-4'>
               <label className='block font-medium md:text-lg text-md text-gray-700 mb-1'>
                 Your Message
@@ -187,15 +178,18 @@ const ContactPage = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows={6}
+                rows={8}
               />
             </div>
+
             <button
               type='submit'
-              className={`block md:text-lg text-md mediumSmall:w-fit w-full bg-royalGreen text-offWhite py-3 px-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors duration-200 ${
-                isFormComplete ? "" : "opacity-50 cursor-not-allowed"
+              disabled={!isFormValid}
+              className={`block md:text-lg text-md mediumSmall:w-fit w-full py-3 px-4 rounded-lg font-semibold ${
+                isFormValid
+                  ? "bg-royalGreen text-offWhite hover:bg-gray-700"
+                  : "bg-gray-300 text-gray-600 cursor-not-allowed"
               }`}
-              disabled={!isFormComplete}
             >
               Send Message
             </button>
@@ -205,5 +199,4 @@ const ContactPage = () => {
     </section>
   );
 };
-
 export default ContactPage;
