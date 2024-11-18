@@ -95,7 +95,6 @@ const BlogPage = () => {
             </a>
           </div>
         </div>
-        {/* Blog Post List */}
         <div className='flex flex-wrap'>
           <div className='w-full'>
             <div className='grid w-full grid-cols-1 md:grid-cols-2 gap-6'>
