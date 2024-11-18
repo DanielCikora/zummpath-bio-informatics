@@ -3,46 +3,66 @@ import BlogImage from "../assets/images/BlogImages/pexels-googledeepmind-1806942
 const BlogPage = () => {
   const posts = [
     {
-      title: "Scouring the Scientific Literature with Large Language Models",
+      title:
+        "Navigating the Inclusion Body Challenge: Problems and Effective Strategies",
       excerpt:
-        "Genomics England has developed a machine learning tool for scanning large volumes of scientific literature to find reports of gene-disease associations.",
-      author:
-        "Sam Barnett, Arina Puzriakova, Catherine Snow, Eleanor Williams, and Francisco Azuaje",
-      date: "Oct 17, 2024",
-      link: "https://www.genomicsengland.co.uk/bioinformatics/blog",
+        "A deep dive into the challenges of inclusion body formation in recombinant protein expression and strategies to overcome them.",
+      author: "John Doe, Jane Smith",
+      date: "Nov 18, 2024",
+      link: "https://blogs.quantumzyme.com/blog/1",
+    },
+    {
+      title: "Enzyme Immobilization: A Sustainable Approach",
+      excerpt:
+        "Exploring enzyme immobilization techniques and their importance in sustainable biocatalysis and industrial applications.",
+      author: "Alice Cooper, Mark Lee",
+      date: "Nov 10, 2024",
+      link: "https://blogs.quantumzyme.com/blog/2",
     },
     {
       title:
-        "Understanding Genetic Links to Disease by Mapping Variants to Genes",
+        "Unlocking Molecular Interactions: The Significance of Computational Molecular Biology and Molecular Docking",
       excerpt:
-        "This post introduces the context around variant-to-gene mapping, sharing the approach and information used to carry out the task.",
-      author: "Elena Bernabeu and Chris Odhams",
-      date: "Aug 1, 2024",
-      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
+        "How computational molecular biology and molecular docking methods are unlocking the secrets of molecular interactions.",
+      author: "Ravi Patel, Emily Thompson",
+      date: "Nov 5, 2024",
+      link: "https://blogs.quantumzyme.com/blog/3",
     },
     {
-      title: "What Does a Bioinformatician Do?",
+      title:
+        "A Guide to Effective Protein Induction Strategies in Escherichia coli",
       excerpt:
-        "A discussion on how the Bioinformatics Operations team supports the journey of a genomic sample.",
-      author: "Aminata Tengbe",
-      date: "Jun 17, 2024",
-      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
+        "A comprehensive guide on optimizing protein induction in E. coli for successful recombinant protein expression.",
+      author: "David Lee, Sarah Johnson",
+      date: "Oct 30, 2024",
+      link: "https://blogs.quantumzyme.com/blog/4",
     },
     {
-      title: "Pathology Whole Slide Images for Multimodal Cancer Research",
+      title:
+        "Catalytic Evolution: Advancing Biocatalysis with Enzyme Engineering",
       excerpt:
-        "This article discusses data quality and standards in digital pathology for machine learning research.",
-      author: "Charlotte Jennings, Samuel Barnett, et al.",
-      date: "Jun 6, 2024",
-      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
+        "Exploring the process of catalytic evolution and how enzyme engineering is advancing biocatalysis for industrial applications.",
+      author: "Liam Chen, Noah Brooks",
+      date: "Oct 25, 2024",
+      link: "https://blogs.quantumzyme.com/blog/5",
     },
     {
-      title: "Increasing Gene Coverage for Developmental Disorders",
+      title:
+        "Catalytic Evolution: Advancing Biocatalysis with Enzyme Engineering",
       excerpt:
-        "This post describes how an external resource was used to improve gene coverage for testing patients with developmental disorders.",
-      author: "Achchuthan Shanmugasundram",
-      date: "May 2, 2024",
-      link: "https://www.genomicsengland.co.uk/blog/pathology-whole-slide-images",
+        "A second look at how catalytic evolution and enzyme engineering can advance biocatalysis, revolutionizing industrial processes.",
+      author: "Liam Chen, Noah Brooks",
+      date: "Oct 20, 2024",
+      link: "https://blogs.quantumzyme.com/blog/6",
+    },
+    {
+      title:
+        "Soluble Biocatalysts: Screening and Production in Escherichia coli",
+      excerpt:
+        "An overview of soluble biocatalysts, their production in E. coli, and the importance of screening techniques for biotechnological applications.",
+      author: "Olivia Green, James White",
+      date: "Oct 15, 2024",
+      link: "https://blogs.quantumzyme.com/blog/7",
     },
   ];
   return (
@@ -59,13 +79,16 @@ const BlogPage = () => {
           />
           <div className='p-6'>
             <h2 className='md:text-4xl text-3xl font-bold text-royalGreen'>
-              Featured: Exploring Machine Learning in Bioinformatics
+              GO GREEN and CLEAN: Harnessing the beauty of enzymes for
+              industrial applications
             </h2>
             <p className='mt-4 text-gray-800 text-xl'>
-              Machine learning is transforming the field of bioinformatics...
+              Enzymes are bio-catalysts that help in accomplishing chemical...
             </p>
             <a
               href={posts[0].link}
+              target='_blank'
+              rel='noreferrer'
               className='inline-block cursor-pointer mt-4 text-royalGreen font-semibold hover:underline'
             >
               Read More

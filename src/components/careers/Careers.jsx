@@ -32,6 +32,14 @@ const Careers = () => {
           Research Assistants at Quantumzyme, depending on performance and
           project needs.
         </p>
+        <div className='text-center md:text-2xl text-xl font-medium text-gray-800 mb-12'>
+          <p>
+            <strong>Program Start Date:</strong> January 6th, 2025
+          </p>
+          <p>
+            <strong>Application Deadline:</strong> December 25th, 2024
+          </p>
+        </div>
         <Link
           className='text-center bg-royalGreen text-offWhite text-xl font-semibold block hover:bg-gray-800 transition-all duration-200 ease-in-out md:py-2 py-3 px-12 md:max-w-fit w-full rounded-lg mx-auto'
           to='/Contact'
