@@ -17,7 +17,7 @@ const FAQPage = () => {
     {
       question: "What is the cost of the ZummPath program?",
       answer:
-        "The full program costs 59,999 rupees, which includes access to all training materials, resources, and expert mentorship throughout the duration of the course.",
+        "The full program costs ₹59,999/- (Excl. GST) rupees, which includes access to all training materials, resources, and expert mentorship throughout the duration of the course.",
     },
     {
       question:

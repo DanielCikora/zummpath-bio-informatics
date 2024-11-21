@@ -6,7 +6,7 @@ const LearnMore = () => {
     {
       type: "text",
       title: "Program Fee",
-      paragraphPrice: "₹ 59,999.99",
+      paragraphPrice: "₹59,999/- (Excl. GST)",
       quantumImage: QuantumzymeImg,
       quantumAlt: "Quantumzyme Logo",
       zummitImage: ZummitImg,

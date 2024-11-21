@@ -17,6 +17,7 @@ import Loader from "./components/navigation/Loader";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 import BlogPage from "./components/pages/BlogPage";
 import WhitePaper from "./components/pages/WhitePaper";
+import ScrollToTop from "./components/navigation/ScrollToTop";
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
@@ -29,6 +30,7 @@ const App = () => {
   }, []);
   return (
     <Router>
+      <ScrollToTop />
       <ToastContainer />
       {loading ? (
         <Loader isVisible={isVisible} />

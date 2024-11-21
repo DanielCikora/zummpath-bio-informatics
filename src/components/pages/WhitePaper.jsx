@@ -15,11 +15,12 @@ const WhitePaper = () => {
             <p className='text-xl'>
               Zummpath is a six-month, in-person bioinformatics Industrial
               Training Program conducted in Bangalore, India. Priced at{" "}
-              <strong>₹59,999</strong>, this intensive program is designed to
-              empower aspiring bioinformaticians with practical skills in
-              computational biology and bioinformatics, preparing them for
-              advanced roles in research and industry. The Industrial Training
-              Program is brought to you by a strategic partnership between
+              <strong>₹59,999/- (Excl. GST)</strong>, this intensive program is
+              designed to empower aspiring bioinformaticians with practical
+              skills in computational biology and bioinformatics, preparing them
+              for advanced roles in research and industry. The Industrial
+              Training Program is brought to you by a strategic partnership
+              between
               <strong> Zummit Infolabs</strong> and <strong>Quantumzyme</strong>
               , leaders in bioinformatics and computational solutions.
             </p>

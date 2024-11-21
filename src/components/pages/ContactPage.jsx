@@ -78,9 +78,9 @@ const ContactPage = () => {
             <p className='md:text-xl text-lg'>
               Want to get in touch with us? We'd love to hear from you! Whether
               you have questions about our 6-month bioinformatics training
-              program for <strong>₹59,999</strong>, are interested in a
-              potential role as a Research Assistant, or need assistance with
-              our services, our team is here to help. We're committed to
+              program for <strong>₹59,999/- (Excl. GST)</strong>, are interested
+              in a potential role as a Research Assistant, or need assistance
+              with our services, our team is here to help. We're committed to
               providing insightful solutions and tailored support for all your
               needs.
             </p>
