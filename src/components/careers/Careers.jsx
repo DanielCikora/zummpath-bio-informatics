@@ -17,22 +17,29 @@ const Careers = () => {
         <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-royalGreen md:mb-48 mb-24'>
           Careers
         </h2>
-        <div className='highlighted-info flex md:flex-row flex-col justify-center items-center gap-10 mb-12'>
-          <h2 className='duration text-6xl font-bold text-mainYellow'>
-            6 Months
-          </h2>
-          <h2 className='price text-6xl font-bold text-gray-800'>
-            ₹59,999/- (Excl. GST)
-          </h2>
+        <div className='highlighted-info flex flex-col md:flex-row justify-center items-center gap-4 mb-12'>
+          <div className='text-center'>
+            <h2 className='duration text-6xl font-bold text-mainYellow'>
+              6 Months
+            </h2>
+            <p className='text-lg text-gray-600'>Program Duration</p>
+          </div>
+          <div className='text-center'>
+            <h2 className='price text-6xl font-bold text-gray-800'>
+              ₹59,999/-
+            </h2>
+            <p className='text-xl text-gray-700'>(Excl. GST)</p>
+          </div>
         </div>
+
         <p className='careers-para bg-[#EAEEED] md:py-10 py-4 px-4 max-w-[1200px] mx-auto md:text-xl text-lg md:font-semibold text-center rounded-xl mb-24'>
           Embark on a pathway to a career in bioinformatics with our structured,{" "}
           <strong>6-month</strong> training program. For{" "}
-          <strong>₹59,999/- (Excl. GST)</strong>, you'll gain hands-on
-          experience and specialized bioinformatics skills. Successfully
-          completing all levels and passing the final assessment may lead to
-          potential roles as Research Assistants at Quantumzyme, depending on
-          performance and project needs.
+          <strong>₹59,999/-</strong>(Excl. GST), you'll gain hands-on experience
+          and specialized bioinformatics skills. Successfully completing all
+          levels and passing the final assessment may lead to potential roles as
+          Research Assistants at Quantumzyme, depending on performance and
+          project needs.
         </p>
         <div className='text-center md:text-2xl text-xl font-medium text-gray-800 mb-12'>
           <p>

@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./program.css";
-import DotsImage from "../assets/images/programImages/program-dots.png";
 gsap.registerPlugin(ScrollTrigger);
 const Program = () => {
   const bulbsRef = useRef([]);
@@ -15,44 +14,33 @@ const Program = () => {
     );
     gsap.fromTo(
       circles,
-      { backgroundColor: "#F8F8F8" }, // Initial background color
+      { backgroundColor: "#F8F8F8" },
       {
-        backgroundColor: "#003C2C", // Fill with royalGreen
+        backgroundColor: "#003C2C",
         duration: 1,
         ease: "power2.out",
         stagger: {
-          each: 1, // Sequential delay between fills
-          from: "start", // Fill circles from left to right
+          each: 1,
+          from: "start",
         },
         scrollTrigger: {
           trigger: bulbsRef.current[0],
           start: "top 80%",
           toggleActions: "play none none none",
-        },
-        onUpdate: function () {
-          numbers.forEach((num, i) => {
-            const circleBg = window.getComputedStyle(
-              circles[i]
-            ).backgroundColor;
-            if (circleBg === "rgb(0, 60, 44)") {
-              gsap.to(num, {
-                color: "#F8F8F8",
-                duration: 0.4,
-                overwrite: "auto",
-              });
-            }
-          });
-        },
-        onComplete: function () {
-          // Ensure all numbers, especially the last one, are white at the end.
-          numbers.forEach((num) => {
-            gsap.to(num, { color: "white", duration: 0.2 });
-          });
+          onEnter: () => {
+            numbers.forEach((num) => {
+              gsap.to(num, { color: "#F8F8F8", duration: 0.4 });
+            });
+          },
+          onLeave: () => {
+            numbers.forEach((num) => {
+              gsap.to(num, { color: "#F8F8F8", duration: 0.2 });
+            });
+          },
         },
       }
     );
   }, []);
-
   const programTexts = [
     {
       id: 1,
