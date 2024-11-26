@@ -4,8 +4,11 @@ const WhitePaper = () => {
     <section className='white-paper'>
       <div className=' text-gray-800 py-20'>
         <div className='wrapper'>
-          <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-gray-800 md:mb-24 mb-16'>
-            Zummpath Bioinformatics Industrial Training Program
+          <h2 className='md:text-6xl mediumSmall:text-5xl text-4xl font-semibold text-center text-gray-800 mb-2'>
+            Zummpath Bioinformatics
+          </h2>
+          <h2 className='md:text-5xl mediumSmall:text-4xl text-3xl font-medium text-center text-gray-800 md:mb-24 mb-16'>
+            Industrial Training Program
           </h2>
           {/* Executive Summary */}
           <section className='mb-8'>

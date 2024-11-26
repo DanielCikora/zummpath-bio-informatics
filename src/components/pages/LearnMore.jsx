@@ -44,7 +44,7 @@ const LearnMore = () => {
     <section className='learn-more pt-20'>
       <div className='min-h-dvh'>
         <div className='wrapper'>
-          <h1 className='md:text-5xl text-4xl font-bold text-center text-royalGreen mb-20'>
+          <h1 className='md:text-5xl text-4xl font-bold text-center text-gray-800 mb-20'>
             Learn More
           </h1>
           {content.map((section, index) => (
