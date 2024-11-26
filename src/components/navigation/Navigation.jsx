@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ZummpathLogoWhite from "../assets/images/navigationImages/zummpath-logo-white.png";
+import ZummpathLogoWhite from "../assets/images/navigationImages/zummpath-bioinformatics-logo-lm.png";
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {

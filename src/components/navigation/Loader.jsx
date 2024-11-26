@@ -1,5 +1,5 @@
 import "./loader.css";
-import ZummpathLogo from "../assets/images/heroImages/zummpath-logo.png";
+import ZummpathLogo from "../assets/images/heroImages/zummpath-bioinformatics-logo.png";
 const Loader = ({ isVisible }) => {
   return (
     <div

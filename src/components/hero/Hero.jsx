@@ -1,6 +1,6 @@
 import Scene from "./Animation/Scene";
 import { Link } from "react-router-dom";
-import ZummpathLogoImage from "../assets/images/heroImages/zummpath-logo.png";
+import ZummpathLogoImage from "../assets/images/heroImages/zummpath-bioinformatics-logo.png";
 const Hero = () => {
   return (
     <section className='hero relative w-full h-screen overflow-hidden'>
