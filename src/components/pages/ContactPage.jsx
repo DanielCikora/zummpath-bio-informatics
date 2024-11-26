@@ -42,10 +42,10 @@ const ContactPage = () => {
     };
     emailjs
       .send(
-        "service_wv4e51v",
-        "template_57aj9o8",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         dataToSend,
-        "Tjxl8Vi15weJhGFl_"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then((response) => {
         console.log("Message sent successfully", response);

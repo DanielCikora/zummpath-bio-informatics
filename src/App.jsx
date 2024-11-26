@@ -1,12 +1,10 @@
-// src/App.jsx
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react"; // Import useState and useEffect
-import Header from "./components/Header";
+import { useEffect, useState } from "react";
+import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Brochure from "./components/brochure/Brochure";
 import Program from "./components/program/Program";
 import Careers from "./components/careers/Careers";
-// Pages
 import FaqPage from "./components/pages/FaqPage";
 import ContactPage from "./components/pages/ContactPage";
 import Footer from "./components/footer/Footer";
